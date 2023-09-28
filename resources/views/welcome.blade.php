@@ -116,6 +116,19 @@
                 </div>
             </div>
         </div>
-        <img src="{{ asset('images/vector-1.png') }}" alt="Vector 1" class="fixed bottom-60 left-[35%]" />
+        <img src="{{ asset('images/vector-1.png') }}" alt="Vector 1" class="absolute bottom-60 left-[35%]" />
+    </div>
+    {{-- Section 5 --}}
+    <div class="bg-custom-orange py-20 px-28 flex flex-row justify-between text-white rounded-lg items-center">
+        <div class="flex flex-col space-y-5 w-1/2">
+            <h1 class="text-4xl">Daftarkan dirimu sekarang juga!</h1>
+            <h2 class="text-base">OLPAIN 2023 adalah singkatan dari Olimpiade PAI Nasional AGPAII tahun 2023 yang
+                dilaksanakan secara berjenjang dari tingkat Provinsi hingga final tingkat Nasional</h2>
+        </div>
+        <div class="w-1/2 flex flex-row justify-end">
+            <a href="{{ route('register') }}"
+                class="border-[1px] border-white rounded-lg py-3 px-7 text-white text-base font-normal">Daftar Sekarang
+                -></a>
+        </div>
     </div>
 </x-guest-layout>
