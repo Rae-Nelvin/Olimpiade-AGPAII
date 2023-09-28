@@ -22,7 +22,11 @@
                     <x-landing.nav-link name="Cara Pendaftaran" route="/cara-pendaftaran" :active="request()->routeIs('cara-pendaftaran')" />
                 </li>
                 <li>
-                    <x-landing.nav-link name="Daftar Sekarang" route="/register" :active="request()->routeIs('register')" />
+                    <x-landing.textButton route="#">
+                        <div class="block py-3">
+                            Daftar Sekarang
+                        </div>
+                    </x-landing.textButton>
                 </li>
                 <li>
                     <x-landing.button route="login">
