@@ -13,6 +13,7 @@ module.exports = {
         "bg-custom-black",
         "bg-custom-orange",
         "bg-custom-white",
+        "bg-custom-light-orange",
         "text-custom-black",
         "text-custom-orange",
     ],
@@ -32,6 +33,7 @@ module.exports = {
             "custom-black": "#1E1E1E",
             "custom-orange": "#ED6C4B",
             "custom-white": "#FAFAFA",
+            "custom-light-orange": "#FEF1ED",
         },
     },
 

@@ -63,13 +63,13 @@
         </div>
     </div>
     {{-- Section 4 --}}
-    <div class="flex flex-row w-full py-36">
-        <div class="bg-custom-white w-1/2 grid grid-cols-6 gap-3">
-            <div class="text-custom-black font-normal col-span-4">
+    <div class="flex flex-row w-full py-36 relative">
+        <div class="bg-custom-white w-1/2 grid grid-cols-6 gap-3 py-32 px-28">
+            <div class="text-custom-black font-normal col-span-5">
                 <div class="flex flex-col space-y-4">
                     <h1 class="text-3xl">Pastikan kamu sudah <br>
                         memenuhi persyaratan berikut,</h1>
-                    <h2 class="text-base">Persyaratan ini digunakan untuk memberikan pengalaman olimpiade <br> yang
+                    <h2 class="text-base">Persyaratan ini digunakan untuk memberikan pengalaman olimpiade yang
                         seadil-adilnya.</h2>
                 </div>
                 <div class="flex flex-col space-y-6 mt-14">
@@ -85,10 +85,37 @@
                 </div>
             </div>
         </div>
-        <div class="bg-white w-1/2 grid grid-cols-6 gap-3">
-            <div class="col-span-4">
-
+        <div class="bg-white w-1/2 grid grid-cols-6 gap-3 py-32 px-28">
+            <div class="col-span-4 flex flex-col">
+                <div class="w-fit">
+                    <x-landing.button rounded="rounded-full">
+                        <h2>Cara Pendaftaran</h2>
+                    </x-landing.button>
+                </div>
+                <div class="flex flex-col mt-7 space-y-4">
+                    <x-landing.caraPendaftaranTile number=1>
+                        Baca Persyaratan dan FAQ terlebih dahulu di halaman ini.
+                    </x-landing.caraPendaftaranTile>
+                    <x-landing.caraPendaftaranTile number=2>
+                        Buat akun dengan nama Tim kalian di KLC.
+                    </x-landing.caraPendaftaranTile>
+                    <x-landing.caraPendaftaranTile number=3>
+                        Semua peserta olimpiade wajib membayar biaya pendaftaran sebesar Rp 75.000,- <br>
+                        <span class="text-custom-orange">ke Rekening 156-00-1445760-2 (Mandiri) <br>
+                            an/ ASOSIASI GURU PENDIDIKAN AGAMA ISLAM</span>
+                    </x-landing.caraPendaftaranTile>
+                    <x-landing.caraPendaftaranTile number=4>
+                        Masuk dengan username dan password dari akun Tim kalian yang telah kalian buat.
+                    </x-landing.caraPendaftaranTile>
+                    <x-landing.caraPendaftaranTile number=5>
+                        Isikan hanya Nama Lengkap (Nama Tim) dan NIK (NIK Ketua) saja.
+                    </x-landing.caraPendaftaranTile>
+                    <x-landing.caraPendaftaranTile number=6>
+                        Masuk kembali ke halaman ini dengan klik banner Olimpiade APBN 2023 pada halaman utama.
+                    </x-landing.caraPendaftaranTile>
+                </div>
             </div>
         </div>
+        <img src="{{ asset('images/vector-1.png') }}" alt="Vector 1" class="fixed bottom-60 left-[35%]" />
     </div>
 </x-guest-layout>

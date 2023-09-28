@@ -7,15 +7,17 @@ use Illuminate\View\Component;
 class Button extends Component
 {
     public $route;
+    public $rounded;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(string $route = '')
+    public function __construct(string $rounded = 'rounded-lg', string $route = '')
     {
         $this->route = $route;
+        $this->rounded = $rounded;
     }
 
     /**
@@ -27,6 +29,7 @@ class Button extends Component
     {
         return view('components.landing.button', [
             'route' => $this->route,
+            'rounded' => $this->rounded,
         ]);
     }
 }
