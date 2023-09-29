@@ -105,7 +105,8 @@
                         Buat akun dengan nama Tim kalian di KLC.
                     </x-landing.caraPendaftaranTile>
                     <x-landing.caraPendaftaranTile number=3>
-                        Semua peserta olimpiade wajib membayar biaya pendaftaran sebesar Rp 75.000,- <br>
+                        Semua peserta olimpiade wajib membayar biaya pendaftaran sebesar <span class="font-bold">Rp
+                            75.000,-</span> <br>
                         <span class="text-custom-orange">ke Rekening 156-00-1445760-2 (Mandiri) <br>
                             an/ ASOSIASI GURU PENDIDIKAN AGAMA ISLAM</span>
                     </x-landing.caraPendaftaranTile>
@@ -121,7 +122,7 @@
                 </div>
             </div>
         </div>
-        <img src="{{ asset('images/vector-1.png') }}" alt="Vector 1" class="absolute bottom-80 left-[35%]" />
+        <img src="{{ asset('images/vector-1.png') }}" alt="Vector 1" class="absolute bottom-52 left-[35%]" />
     </div>
     {{-- Section 5 --}}
     <div class="bg-custom-orange py-20 px-28 flex flex-row justify-between text-white rounded-lg items-center">
