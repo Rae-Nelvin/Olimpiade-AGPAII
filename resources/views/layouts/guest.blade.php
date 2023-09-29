@@ -18,7 +18,8 @@
 </head>
 
 <body>
-    <main class="font-manrope antialiased mx-[120px] min-h-screen bg-white">
+    <main class="font-manrope antialiased min-h-screen bg-white">
+        <x-landing.navbar />
         {{ $slot }}
     </main>
 </body>
