@@ -16,8 +16,11 @@ module.exports = {
         "bg-custom-light-orange",
         "text-custom-black",
         "text-custom-orange",
-        'text-custom-grey',
-        'ring-custom-orange'
+        "text-custom-grey",
+        "ring-custom-orange",
+        "bg-custom-light-red",
+        "bg-custom-red",
+        "text-custom-red",
     ],
 
     theme: {
@@ -36,7 +39,9 @@ module.exports = {
             "custom-orange": "#ED6C4B",
             "custom-white": "#FAFAFA",
             "custom-light-orange": "#FEF1ED",
-            'custom-grey': '#B4B4B4',
+            "custom-grey": "#B4B4B4",
+            "custom-light-red": "#FDD5D5",
+            "custom-red": "#F01E1E",
         },
     },
 

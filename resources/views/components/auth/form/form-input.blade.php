@@ -2,7 +2,7 @@
     <div class="flex flex-col space-y-4">
         <label for="{{ $label }}" class="font-normal text-base text-custom-black">{{ $label }}</label>
         <div
-            class="py-3 px-5 border-[1px] border-custom-orange focus:ring-custom-orange focus:border-custom-orange focus:bg-custom-light-orange rounded-lg autofill:bg-custom-light-orange">
+            class="py-3 px-5 border-[1px] border-custom-orange focus:ring-custom-orange focus:border-custom-orange focus:bg-custom-light-orange rounded-lg autofill:bg-custom-light-orange {{ $errors->has($name) ? 'bg-custom-light-red' : 'bg-transparent' }}">
             <label for="{{ $name }}-input" class="flex flex-row space-x-3 w-full items-center text-gray-500">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                     <path fill="currentColor"
@@ -12,7 +12,8 @@
                     {{ $label }}
                 </span>
             </label>
-            <input type="file" id="{{ $name }}-input" name="{{ $name }}" class="w-full hidden" required />
+            <input type="file" id="{{ $name }}-input" name="{{ $name }}" class="w-full hidden"
+                required />
             {{-- @error($name)
                 <span class="text-custom-red text-md">{{ $message }}</span>
             @enderror --}}
@@ -22,7 +23,7 @@
     <div class="flex flex-col space-y-4">
         <label for="{{ $label }}" class="font-normal text-base text-custom-black">{{ $label }}</label>
         <input type="{{ $type }}" name="{{ $name }}"
-            class="py-3 px-5 border-[1px] border-custom-orange focus:ring-custom-orange focus:border-custom-orange focus:bg-custom-light-orange rounded-lg autofill:bg-custom-light-orange"
+            class="py-3 px-5 border-[1px] {{ $errors->has($name) ? 'bg-custom-light-red' : 'bg-transparent' }} border-custom-orange focus:ring-custom-orange focus:border-custom-orange focus:bg-custom-light-orange rounded-lg autofill:bg-custom-light-orange"
             placeholder="{{ $label }}" required />
     </div>
 @endif
