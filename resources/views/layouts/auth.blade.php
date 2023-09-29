@@ -14,11 +14,13 @@
     <link rel="stylesheet" href="{{ asset('js/app.js') }}">
 </head>
 
-<body>
-    <main class="font-manrope antialiased min-h-screen bg-white">
-        <x-landing.navbar />
+<body class="font-manrope antialiased h-screen relative flex flex-row">
+    <div class="w-2/3 bg-custom-orange h-full"></div>
+    <div class="w-1/3 bg-white h-full"></div>
+    <div class="absolute inset-0 z-10 m-[120px] grid grid-cols-12 gap-5">
+        <x-auth.leftSide />
         {{ $slot }}
-    </main>
+    </div>
 </body>
 
 </html>

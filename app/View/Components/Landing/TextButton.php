@@ -7,14 +7,17 @@ use Illuminate\View\Component;
 class TextButton extends Component
 {
     public $route;
+    public $color;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(string $route)
+    public function __construct(string $route, string $color = 'text-custom-orange')
     {
         $this->route = $route;
+        $this->color = $color;
     }
 
     /**
@@ -26,6 +29,7 @@ class TextButton extends Component
     {
         return view('components.landing.text-button', [
             'route' => $this->route,
+            'color' => $this->color,
         ]);
     }
 }
