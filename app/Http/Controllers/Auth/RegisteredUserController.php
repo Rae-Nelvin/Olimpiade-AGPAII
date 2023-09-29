@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Illuminate\Support\Str;
 
 class RegisteredUserController extends Controller
 {
@@ -46,21 +47,23 @@ class RegisteredUserController extends Controller
 
         $data = $request->all();
 
-        $username = explode('@', $request->email)[0];
-
         $user = User::create([
-            'name' => $username,
+            'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
 
+        $randomDirectoryName = Str::random(20);
+
+        $foto_kartu_pelajar = $request->file('foto_kartu_pelajar')->store("{$randomDirectoryName}/foto_kartu_pelajar");
+        $foto_bukti_pembayaran = $request->file('foto_bukti_pembayaran')->store("{$randomDirectoryName}/foto_bukti_pembayaran");
+
         $participant = ParticipantDetail::create([
-            'name' => $data['name'],
             'user_id' => $user->id,
             'nisn' => $data['nisn'],
             'asal_sekolah' => $data['asal_sekolah'],
-            'foto_kartu_pelajar' => $request->file('foto_kartu_pelajar')->store('foto_kartu_pelajar'),
-            'foto_bukti_pembayaran' => $request->file('foto_bukti_pembayaran')->store('foto_bukti_pembayaran'),
+            'foto_kartu_pelajar' => $foto_kartu_pelajar,
+            'foto_bukti_pembayaran' => $foto_bukti_pembayaran,
         ]);
         $participant->save();
 

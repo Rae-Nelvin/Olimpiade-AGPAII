@@ -18,7 +18,7 @@
                 </div>
             @endif
         </div>
-        <form action="{{ route($action) }}" method="POST" class="{{ $formClass }}">
+        <form action="{{ route($action) }}" method="POST" class="{{ $formClass }}" enctype="multipart/form-data">
             @csrf
             {{ $slot }}
             <div class="flex flex-row pl-6 space-x-20 mt-9 justify-end">
