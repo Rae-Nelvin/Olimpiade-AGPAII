@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\ParticipantDetail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\DB;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class AdminController extends Controller
 {
@@ -29,7 +32,45 @@ class AdminController extends Controller
 
     // public function export()
     // {
-    //     return Excel::download(new ParticipantDetailExport, 'data-peserta.xlsx');
+    //     $filename = 'exported-data-peserta.csv';
+
+    //     $headers = array(
+    //         "Content-type" => "text/csv",
+    //         "Content-Disposition" => "attachment; filename=$filename",
+    //         "Pragma" => "no-cache",
+    //         "Cache-Control" => "must-revalidate, post-check=0, pre-check=0",
+    //         "Expires" => "0",
+    //     );
+
+    //     $handle = fopen('php://output', 'w');
+
+    //     // Write the header row
+    //     fputcsv($handle, ['No', 'Tanggal', 'NISN', 'Nama Lengkap', 'Asal Sekolah', 'E-mail', 'Kartu Pelajar', 'Bukti Bayar']); // Replace with your table's column names
+
+    //     // Query your database to fetch the data
+    //     $data = DB::table('detail_participants')
+    //         ->join('users', 'detail_participants.user_id', '=', 'users.id')
+    //         ->select('detail_participants.nisn', 'detail_participants.asal_sekolah', 'detail_participants.')
+    //         ->get();
+
+    //     // Loop through the data and write each row to the CSV file
+    //     foreach ($data as $row) {
+    //         fputcsv($handle, [
+    //             $row->column1,
+    //             $row->column2,
+    //             $row->column3,
+    //         ]); // Replace with your table's column names
+    //     }
+
+    //     fclose($handle);
+
+    //     return Response::stream(
+    //         function () use ($handle) {
+    //             fclose($handle);
+    //         },
+    //         200,
+    //         $headers
+    //     );
     // }
 
     /**

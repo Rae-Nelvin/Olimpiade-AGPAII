@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/download/{filename}', [DownloadController::class, 'download'])->name('file.download');
+
 
 Route::middleware(['auth', 'isParticipant'])->group(function () {
     Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');

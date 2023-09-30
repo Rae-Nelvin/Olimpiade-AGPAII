@@ -43,16 +43,17 @@
                         yang
                         dilaksanakan secara berjenjang dari tingkat Provinsi hingga final tingkat Nasional</h2>
                     <div class="w-fit mt-9">
-                        <x-landing.button route="#">
+                        <a href="{{ route('file.download', ['filename' => 'juknis.pdf']) }}"
+                            class="block py-3 px-7 bg-white border-custom-orange border-[1px] rounded-md text-custom-orange hover:bg-custom-orange hover:text-white transition-colors duration-300 ease-in-out">
                             <div class="flex flex-row space-x-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24">
                                     <path fill="currentColor"
                                         d="M10 14h4v-2h-4v2Zm0-3h8V9h-8v2Zm0-3h8V6h-8v2ZM8 18q-.825 0-1.413-.588T6 16V4q0-.825.588-1.413T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.588 1.413T20 18H8Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.413-.588T2 20V6h2v14h14v2H4ZM8 4v12V4Z" />
                                 </svg>
-                                <h3 class="text-base">Unduh Juknis</h3>
+                                <h3 class="text-base">Download Juknis</h3>
                             </div>
-                        </x-landing.button>
+                        </a>
                     </div>
                 </div>
             </div>
