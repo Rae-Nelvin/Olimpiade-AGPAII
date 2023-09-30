@@ -14,13 +14,14 @@ module.exports = {
         "bg-custom-orange",
         "bg-custom-white",
         "bg-custom-light-orange",
+        "bg-custom-light-red",
+        "bg-custom-red",
         "text-custom-black",
         "text-custom-orange",
         "text-custom-grey",
-        "ring-custom-orange",
-        "bg-custom-light-red",
-        "bg-custom-red",
         "text-custom-red",
+        "ring-custom-orange",
+        "border-custom-grey",
     ],
 
     theme: {

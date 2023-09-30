@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\Landing;
+namespace App\View\Components\Admin;
 
 use Illuminate\View\Component;
 
@@ -29,6 +29,8 @@ class NavLink extends Component
      */
     public function render()
     {
-        return view('components.landing.nav-link', ['route' => $this->route, 'name' => $this->name, 'active' => $this->active]);
+        return view('components.admin.nav-link', [
+            'route' => $this->route, 'name' => $this->name, 'active' => $this->active
+        ]);
     }
 }
