@@ -11,7 +11,7 @@
 
     <!-- Scripts -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('js/app.js') }}">
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 
 <body>
@@ -27,6 +27,8 @@
             {{ $slot }}
         </div>
     </main>
+
+    <x-landing.footer />
 </body>
 
 </html>

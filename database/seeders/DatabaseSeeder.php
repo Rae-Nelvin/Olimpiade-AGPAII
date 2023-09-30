@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
 
 
         // Create participant users and their details
-        $participantCount = 50; // Adjust the number of participants you want to create
+        $participantCount = 1; // Adjust the number of participants you want to create
 
         User::factory($participantCount)->create(); // Create participant users
 
