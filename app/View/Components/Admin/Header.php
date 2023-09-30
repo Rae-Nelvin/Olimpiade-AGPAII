@@ -6,16 +6,16 @@ use Illuminate\View\Component;
 
 class Header extends Component
 {
-    public $role;
+    public $title;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(string $role)
+    public function __construct(string $title)
     {
-        $this->role = $role;
+        $this->title = $title;
     }
 
     /**
@@ -26,7 +26,7 @@ class Header extends Component
     public function render()
     {
         return view('components.admin.header', [
-            'role' => $this->role
+            'title' => $this->title
         ]);
     }
 }

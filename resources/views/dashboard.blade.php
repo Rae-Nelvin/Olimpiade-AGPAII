@@ -1,5 +1,5 @@
 <x-app-layout>
-    <x-admin.header role="Peserta" />
+    <x-admin.header title="Dashboard Peserta" />
     <div class="flex flex-row space-x-7 mt-4">
         <div class="w-2/5">
             <x-admin.box header="Token Ujian">

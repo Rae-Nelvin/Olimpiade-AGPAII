@@ -5,6 +5,6 @@
     </div>
     <ul class="flex flex-col">
         <x-admin.navLink name="Dashboard" route="/dashboard" :active="request()->routeIs('dashboard')" />
-        <x-admin.navLink name="Data Diri" route="#" :active="request()->routeIs('data-diri')" />
+        <x-admin.navLink name="Data Diri" route="/data-diri" :active="request()->routeIs('data-diri')" />
     </ul>
 </div>
