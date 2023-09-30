@@ -40,5 +40,8 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="flex flex-row justify-end mt-7">
+            {{ $results->links('pagination::tailwind') }}
+        </div>
     </div>
 </x-app-layout>
