@@ -21,7 +21,6 @@ class CreateParticipantDetailsTable extends Migration
             $table->string('asal_sekolah');
             $table->string('foto_kartu_pelajar');
             $table->string('foto_bukti_pembayaran');
-            $table->enum('status', ['pending', 'verified', 'rejected'])->default('pending');
         });
     }
 
