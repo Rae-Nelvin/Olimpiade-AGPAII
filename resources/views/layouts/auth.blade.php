@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('js/app.js') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body class="font-manrope antialiased h-screen relative flex flex-row">

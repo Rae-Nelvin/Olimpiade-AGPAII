@@ -15,9 +15,17 @@
 </head>
 
 <body>
-    <main class="font-manrope antialiased min-h-screen bg-white">
+    <main class="font-manrope antialiased min-h-screen bg-white relative">
         <x-landing.navbar />
-        {{ $slot }}
+        <div class="absolute z-0">
+            <img src="{{ asset('images/vector-3.png') }}" alt="Vector 3" class="w-auto">
+        </div>
+        <div class="absolute z-0">
+            <img src="{{ asset('images/vector-4.png') }}" alt="Vector 4" class="w-auto absolute bottom-0 right-0">
+        </div>
+        <div class="z-50">
+            {{ $slot }}
+        </div>
     </main>
 </body>
 
