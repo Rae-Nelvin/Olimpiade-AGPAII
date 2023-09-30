@@ -8,18 +8,13 @@
 
 <!-- Dropdown menu -->
 <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+    <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
         <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Settings</a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Earnings</a>
-        </li>
-        <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sign out</a>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button class="block px-4 py-2 hover:bg-custom-orange hover:text-white w-full text-left">Sign
+                    out</button>
+            </form>
         </li>
     </ul>
 </div>

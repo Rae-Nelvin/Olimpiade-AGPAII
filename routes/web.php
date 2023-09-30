@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,13 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth', 'isParticipant'])->group(function () {
+    Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
 
-Route::get('/data-diri', function () {
-    return view('data-diri');
-})->name('data-diri');
+    Route::get('/data-diri', [UserController::class, 'dataDiriIndex'])->name('data-diri');
+});
+
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard-admin', [AdminController::class, 'index'])->name('dashboard-admin');

@@ -19,7 +19,7 @@
     <main class="bg-custom-dark-white grid grid-cols-12 min-h-screen">
         <x-admin.sidebar />
         <div class="col-span-10 py-7 px-5 flex flex-col w-full justify-between">
-            <div>
+            <div class="z-30">
                 {{ $slot }}
             </div>
             <h5 class="font-normal text-sm text-center mt-10">© Copyright 2023 | Olimpiade AGPAII </h5>

@@ -17,6 +17,7 @@ module.exports = {
         "bg-custom-light-red",
         "bg-custom-red",
         "bg-custom-dark-white",
+        "bg-custom-light-grey",
         "text-custom-black",
         "text-custom-orange",
         "text-custom-grey",
@@ -45,6 +46,7 @@ module.exports = {
             "custom-light-red": "#FDD5D5",
             "custom-red": "#F01E1E",
             "custom-dark-white": "#F9FAFB",
+            "custom-light-grey": "#f8f8f8",
         },
     },
 
