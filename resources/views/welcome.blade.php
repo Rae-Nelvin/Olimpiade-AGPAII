@@ -8,7 +8,7 @@
                     the Champion?
                 </h1>
                 <div class="flex flex-row items-center space-x-6 mt-10">
-                    <x-landing.textButton route="#">
+                    <x-landing.textButton route="#informasi">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path fill="currentColor"
                                 d="M10 14h4v-2h-4v2Zm0-3h8V9h-8v2Zm0-3h8V6h-8v2ZM8 18q-.825 0-1.413-.588T6 16V4q0-.825.588-1.413T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.588 1.413T20 18H8Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.413-.588T2 20V6h2v14h14v2H4ZM8 4v12V4Z" />
@@ -33,7 +33,7 @@
     </div>
     {{-- Section 3 --}}
     <x-landing.container>
-        <div class="py-36 grid grid-cols-12 gap-3">
+        <div class="py-36 grid grid-cols-12 gap-3" id="informasi">
             <div class="col-span-5">
                 <div class="flex flex-col text-black">
                     <h1 class="font-normal text-3xl">Olimpiade PAI Nasional AGPAII</h1>
@@ -69,7 +69,7 @@
         </div>
     </x-landing.container>
     {{-- Section 4 --}}
-    <div class="flex flex-row w-full py-32 relative h-screen">
+    <div class="flex flex-row w-full py-32 relative h-screen" id="cara-pendaftaran">
         <div class="bg-custom-white w-1/2 grid grid-cols-6 gap-3 py-32 px-28">
             <div class="text-custom-black font-normal col-span-5">
                 <div class="flex flex-col space-y-4">
@@ -94,9 +94,9 @@
         <div class="bg-white w-1/2 grid grid-cols-6 gap-3 py-32 px-28">
             <div class="col-span-4 flex flex-col">
                 <div class="w-fit">
-                    <x-landing.button rounded="rounded-full">
+                    <div class="py-3 px-7 text-white bg-custom-orange rounded-full hover:bg-custom-orange">
                         <h2>Cara Pendaftaran</h2>
-                    </x-landing.button>
+                    </div>
                 </div>
                 <div class="flex flex-col mt-7 space-y-4">
                     <x-landing.caraPendaftaranTile number=1>

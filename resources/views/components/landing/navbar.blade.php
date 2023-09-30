@@ -16,13 +16,13 @@
                     <x-landing.nav-link name="Beranda" route="/" :active="request()->routeIs('/')" />
                 </li>
                 <li>
-                    <x-landing.nav-link name="Informasi" route="/informasi" :active="request()->routeIs('informasi')" />
+                    <x-landing.nav-link name="Informasi" route="#informasi" :active="request()->routeIs('informasi')" />
                 </li>
                 <li>
-                    <x-landing.nav-link name="Cara Pendaftaran" route="/cara-pendaftaran" :active="request()->routeIs('cara-pendaftaran')" />
+                    <x-landing.nav-link name="Cara Pendaftaran" route="#cara-pendaftaran" :active="request()->routeIs('cara-pendaftaran')" />
                 </li>
                 <li>
-                    <x-landing.textButton route="#">
+                    <x-landing.textButton route="register">
                         <div class="block py-3">
                             Daftar Sekarang
                         </div>
