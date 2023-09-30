@@ -28,14 +28,14 @@
         </div>
     </main>
 
-    <footer class="mx-[120px] mt-32 flex flex-col pb-20">
-        <div class="flex flex-row text-base text-black space-x-32">
-            <div class="flex flex-col space-y-6 w-1/5">
+    <footer class="mx-[120px] flex flex-col pb-20" style="margin-top: 128px; padding-bottom: 80px;">
+        <div class="flex flex-row text-base text-black">
+            <div class="flex flex-col space-y-6" style="width: 20%; margin-right: 128px;">
                 <img src="{{ asset('images/logo-2.png') }}" alt="Logo 2" class="w-max" />
                 <p class="font-normal text-sm">OLPAIN 2023 adalah singkatan dari Olimpiade PAI Nasional AGPAII tahun
                     2023 yang dilaksanakan secara berjenjang dari tingkat Provinsi hingga final tingkat Nasional</p>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-2" style="margin-right: 128px;">
                 <li>
                     <a href="/" class="font-semibold">Beranda</a>
                 </li>
@@ -47,7 +47,7 @@
                 </li>
                 <li><a href="#cara-pendaftaran">Cara Pendaftaran</a></li>
             </ul>
-            <ul class="space-y-2">
+            <ul class="space-y-2" style="margin-right: 128px;">
                 <li>
                     <a href="#" class="font-semibold">Contact Center</a>
                 </li>
