@@ -1,19 +1,21 @@
 <?php
 
-namespace App\View\Components\Admin\Header;
+namespace App\View\Components\Admin;
 
 use Illuminate\View\Component;
 
-class Dropdown extends Component
+class Box extends Component
 {
+    public $header;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(string $header)
     {
-        //
+        $this->header = $header;
     }
 
     /**
@@ -23,6 +25,8 @@ class Dropdown extends Component
      */
     public function render()
     {
-        return view('components.admin.header.dropdown');
+        return view('components.admin.box', [
+            'header' => $this->header
+        ]);
     }
 }
