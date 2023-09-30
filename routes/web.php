@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,12 +26,11 @@ Route::get('/data-diri', function () {
     return view('data-diri');
 })->name('data-diri');
 
-Route::get('/dashboard-admin', function () {
-    return view('admin.dashboard');
-})->name('dashboard-admin');
+Route::middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('/dashboard-admin', [AdminController::class, 'index'])->name('dashboard-admin');
 
-Route::get('/data-peserta', function () {
-    return view('admin.data-peserta');
-})->name('data-peserta');
+    Route::get('/data-peserta', [AdminController::class, 'dataPesertaIndex'])->name('data-peserta');
+});
+
 
 require __DIR__ . '/auth.php';

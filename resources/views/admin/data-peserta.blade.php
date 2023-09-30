@@ -4,7 +4,7 @@
         <x-landing.button>Unduh CSV</x-landing.button>
     </div>
     {{-- <x-landing.button href="{{ route('admin.data-peserta.export') }}">Unduh CSV</x-landing.button> --}}
-    <div class="relative overflow-x-auto">
+    <div class="relative overflow-x-auto z-20">
         <table class="w-full bg-white mt-6 rounded-lg shadow-sm shadow-custom-grey text-black text-sm font-normal">
             <thead class="font-semibold">
                 <tr>
@@ -20,22 +20,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="p-6">1</td>
-                    <td>30/01/20 01:23</td>
-                    <td>12012512</td>
-                    <td>Dary Ramadhan Fajar</td>
-                    <td>SMAN 3 Malang</td>
-                    <td>dary@gmail.com</td>
-                    <td>IMG_0325</td>
-                    <td>IMG_2352</td>
-                    <td class="flex flex-row space-x-2 w-fit py-6">
-                        <a href="#"
-                            class="border border-custom-light-orange text-custom-orange py-1 px-2 font-normal text-xs rounded-md hover:bg-custom-orange hover:text-white duration-300 ease-in-out">Edit</a>
-                        <a href="#"
-                            class="bg-custom-red text-white py-1 px-2 font-normal text-xs rounded-md">Delete</a>
-                    </td>
-                </tr>
+                @foreach ($results as $data)
+                    <tr>
+                        <td class="p-6">{{ $loop->iteration }}</td>
+                        <td>{{ \Carbon\Carbon::parse($data->created_at)->format('d/m/y H:i') }}</td>
+                        <td>{{ $data->nisn }}</td>
+                        <td>{{ $data->user->name }}</td>
+                        <td>{{ $data->asal_sekolah }}</td>
+                        <td>{{ $data->user->email }}</td>
+                        <td>IMG_0325</td>
+                        <td>IMG_2352</td>
+                        <td class="flex flex-row space-x-2 w-fit py-6">
+                            <a href="#"
+                                class="border border-custom-light-orange text-custom-orange py-1 px-2 font-normal text-xs rounded-md hover:bg-custom-orange hover:text-white duration-300 ease-in-out">Edit</a>
+                            <a href="#"
+                                class="bg-custom-red text-white py-1 px-2 font-normal text-xs rounded-md">Delete</a>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

@@ -22,8 +22,8 @@
             <div>
                 {{ $slot }}
             </div>
-            <h5 class="font-normal text-sm text-center">© Copyright 2023 | Olimpiade AGPAII </h5>
-            <div class="absolute z-0 bottom-[-25%] left-[10%]">
+            <h5 class="font-normal text-sm text-center mt-10">© Copyright 2023 | Olimpiade AGPAII </h5>
+            <div class="absolute z-0 bottom-0 left-[10%]">
                 <img src="{{ asset('images/vector-3.png') }}" alt="Vector 3" class="w-max">
             </div>
         </div>

@@ -3,7 +3,7 @@
     <div class="flex flex-row space-x-7 mt-4">
         <div class="w-2/5">
             <x-admin.box header="Total Pendaftar">
-                <h1 class="font-normal text-3xl">12900 orang</h1>
+                <h1 class="font-normal text-3xl">{{ $totalPendaftar }} orang</h1>
             </x-admin.box>
         </div>
         <div class="w-3/5">

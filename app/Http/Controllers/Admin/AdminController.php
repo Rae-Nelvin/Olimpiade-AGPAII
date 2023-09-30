@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\ParticipantDetail;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -14,8 +15,22 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        $totalPendaftar = ParticipantDetail::count();
+
+        return view('admin.dashboard', compact('totalPendaftar'));
     }
+
+    public function dataPesertaIndex()
+    {
+        $results = ParticipantDetail::paginate(10);
+
+        return view('admin.data-peserta', compact('results'));
+    }
+
+    // public function export()
+    // {
+    //     return Excel::download(new ParticipantDetailExport, 'data-peserta.xlsx');
+    // }
 
     /**
      * Show the form for creating a new resource.

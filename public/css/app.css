@@ -1174,6 +1174,8 @@ video {
   overflow: hidden;
 }.overflow-x-auto {
   overflow-x: auto;
+}.overflow-y-hidden {
+  overflow-y: hidden;
 }.rounded {
   border-radius: 0.25rem;
 }.rounded-2xl {
