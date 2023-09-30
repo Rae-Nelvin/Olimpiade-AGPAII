@@ -15,7 +15,11 @@
 </head>
 
 <body class="font-manrope antialiased h-screen relative flex flex-row">
-    <div class="w-2/3 bg-custom-orange h-full"></div>
+    <div class="w-2/3 bg-custom-orange h-full">
+        <div class="absolute inset-0 z-0">
+            <img src="{{ asset('images/vector-2.png') }}" alt="Vector 2" class="w-1/2">
+        </div>
+    </div>
     <div class="w-1/3 bg-white h-full"></div>
     <div class="absolute inset-0 z-10 m-[120px] grid grid-cols-12 gap-5">
         <x-auth.leftSide />

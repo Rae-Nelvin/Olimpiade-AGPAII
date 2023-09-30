@@ -1,4 +1,10 @@
 <x-guest-layout>
+    <div class="absolute inset-0 z-0">
+        <img src="{{ asset('images/vector-3.png') }}" alt="Vector 3" class="w-auto">
+    </div>
+    <div class="absolute inset-0 z-0">
+        <img src="{{ asset('images/vector-4.png') }}" alt="Vector 4" class="w-auto absolute bottom-0 right-0">
+    </div>
     {{-- Section 1 --}}
     <x-landing.container>
         <div class="h-screen w-full bg-landing-1 bg-cover bg-center">
