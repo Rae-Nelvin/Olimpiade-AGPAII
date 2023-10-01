@@ -43,6 +43,7 @@ class RegisteredUserController extends Controller
             'asal_sekolah' => ['required', 'string'],
             'foto_kartu_pelajar' => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
             'foto_bukti_pembayaran' => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
+            'phone_number' => ['required', 'string', 'regex:/^08\d{9,12}$/'],
         ]);
 
         $data = $request->all();
@@ -51,6 +52,7 @@ class RegisteredUserController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'phone_number' => $data['phone_number'],
         ]);
 
         $randomDirectoryName = Str::random(20);
@@ -71,6 +73,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect(RouteServiceProvider::PARTICIPANTHOME);
     }
 }

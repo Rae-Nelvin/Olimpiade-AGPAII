@@ -10,6 +10,7 @@
             </div>
             <div class="flex flex-col space-y-5 w-full">
                 <x-auth.form.formInput label="Asal Sekolah" type="text" name="asal_sekolah" />
+                <x-auth.form.formInput label="Nomor Handphone" type="text" name="phone_number" />
                 <x-auth.form.formInput label="Kata Sandi" type="password" name="password" />
                 <x-auth.form.formInput label="Bukti Pembayaran" type="file" name="foto_bukti_pembayaran" />
                 <p class="text-custom-orange font-normal text-xs">Pendaftaran sebesar <span
