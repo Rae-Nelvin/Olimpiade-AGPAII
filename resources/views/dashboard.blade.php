@@ -19,7 +19,7 @@
                     </div>
                 @else
                     <h1 class="font-normal text-3xl text-black">Harap menunggu tanggal pelaksanaan ujian pada
-                        <span class="font-bold">2 November 2023</span>
+                        <span class="font-bold">12 November 2023</span>
                     </h1>
                 @endif
             </x-admin.box>
