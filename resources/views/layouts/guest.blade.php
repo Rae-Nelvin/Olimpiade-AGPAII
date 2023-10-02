@@ -15,51 +15,14 @@
 </head>
 
 <body>
-    <main class="font-manrope antialiased min-h-screen bg-white relative">
+    <main class="font-manrope antialiased min-h-screen bg-white overflow-x-hidden">
         <x-landing.navbar />
-        <div class="absolute z-0">
-            <img src="{{ asset('images/vector-3.png') }}" alt="Vector 3" class="w-auto">
-        </div>
-        <div class="absolute z-0">
-            <img src="{{ asset('images/vector-4.png') }}" alt="Vector 4" class="w-auto absolute bottom-0 right-0">
-        </div>
-        <div class="z-50">
+        <div>
             {{ $slot }}
         </div>
     </main>
 
-    <footer class="mx-[120px] flex flex-col pb-20" style="margin-top: 128px; padding-bottom: 80px;">
-        <div class="flex flex-row text-base text-black">
-            <div class="flex flex-col space-y-6" style="width: 20%; margin-right: 128px;">
-                <img src="{{ asset('images/logo-2.png') }}" alt="Logo 2" class="w-max" />
-                <p class="font-normal text-sm">OLPAIN 2023 adalah singkatan dari Olimpiade PAI Nasional AGPAII tahun
-                    2023 yang dilaksanakan secara berjenjang dari tingkat Provinsi hingga final tingkat Nasional</p>
-            </div>
-            <ul class="space-y-2" style="margin-right: 128px;">
-                <li>
-                    <a href="/" class="font-semibold">Beranda</a>
-                </li>
-                <li>
-                    <a href="/">Beranda</a>
-                </li>
-                <li>
-                    <a href="#informasi">Pusat Informasi</a>
-                </li>
-                <li><a href="#cara-pendaftaran">Cara Pendaftaran</a></li>
-            </ul>
-            <ul class="space-y-2" style="margin-right: 128px;">
-                <li>
-                    <a href="#" class="font-semibold">Contact Center</a>
-                </li>
-                <li><a href="/">Beranda</a></li>
-                <li><a href="#informasi">Pusat Informasi</a></li>
-                <li><a href="#cara-pendaftaran">Cara Pendaftaran</a></li>
-            </ul>
-        </div>
-        <div class="flex flex-row justify-end mt-20">
-            <h5 class="text-custom-grey text-xs">© Copyright 2023 | Olimpiade AGPAII </h5>
-        </div>
-    </footer>
+    <x-landing.footer />
 </body>
 
 </html>

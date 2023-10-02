@@ -1,3 +1,3 @@
-<div class="flex flex-col bg-white py-6 px-12 space-y-2">
+<div class="flex flex-row {{ $itemsAlignment }} space-x-6 bg-white p-6">
     {{ $slot }}
 </div>

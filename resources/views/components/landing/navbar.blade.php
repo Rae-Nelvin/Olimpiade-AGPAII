@@ -1,5 +1,8 @@
 <nav class="bg-white mx-[120px]">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
+    <div class="flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="/" class="flex items-center">
+            <img src="{{ asset('images/logo-3.png') }}" alt="Logo 3" class="w-44" />
+        </a>
         <button data-collapse-toggle="navbar-default" type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-default" aria-expanded="false">

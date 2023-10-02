@@ -4,18 +4,16 @@ namespace App\View\Components\Landing;
 
 use Illuminate\View\Component;
 
-class SyaratTile extends Component
+class Footer extends Component
 {
-    public $itemsAlignment;
-
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(string $itemsAlignment = 'items-start')
+    public function __construct()
     {
-        $this->itemsAlignment = $itemsAlignment;
+        //
     }
 
     /**
@@ -25,8 +23,6 @@ class SyaratTile extends Component
      */
     public function render()
     {
-        return view('components.landing.syarat-tile', [
-            'itemsAlignment' => $this->itemsAlignment,
-        ]);
+        return view('components.landing.footer');
     }
 }
