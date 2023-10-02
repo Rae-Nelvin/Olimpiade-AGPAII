@@ -14,7 +14,7 @@
                 <x-auth.form.formInput label="Kata Sandi" type="password" name="password" />
                 <x-auth.form.formInput label="Bukti Pembayaran" type="file" name="foto_bukti_pembayaran" />
                 <p class="text-custom-orange font-normal text-xs">Pendaftaran sebesar <span
-                        class="font-semibold">Rp50.000</span> ke Rekening <span class="font-semibold">156-00-1445760-2
+                        class="font-semibold">Rp75.000</span> ke Rekening <span class="font-semibold">156-00-1445760-2
                         (Mandiri) an/ ASOSIASI GURU PENDIDIKAN AGAMA ISLAM</span></p>
             </div>
         </div>
