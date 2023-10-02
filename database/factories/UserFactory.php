@@ -18,6 +18,7 @@ class UserFactory extends Factory
             'email' => $this->faker->unique()->safeEmail,
             'email_verified_at' => now(),
             'password' => bcrypt('password'), // Default password for testing
+            'phone_number' => '0812312332',
             'remember_token' => Str::random(10),
         ];
     }

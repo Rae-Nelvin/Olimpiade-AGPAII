@@ -19,6 +19,7 @@ class AdminSeeder extends Seeder
             'name' => 'Leonardo Wijaya',
             'email' => 'leonardo.wijaya003@gmail.com',
             'password' => bcrypt('Leonardo123'),
+            'phone_number' => '081330229959',
             'role' => 'admin',
         ]);
 
@@ -26,6 +27,7 @@ class AdminSeeder extends Seeder
             'name' => 'adminagpaii',
             'email' => 'adminagpaii@admin.com',
             'password' => bcrypt('4dm1n49p411'),
+            'phone_number' => '08132312312323',
             'role' => 'admin',
         ]);
     }
