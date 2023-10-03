@@ -1,5 +1,5 @@
 <x-auth-layout>
-    <x-auth.form.box colSpan="col-span-7" title="Registrasi Peserta" subtitle="Pendaftaran" action="register"
+    <x-auth.form.box colSpan="col-span-6" title="Registrasi Peserta" subtitle="Pendaftaran" action="register"
         formClass="mt-9">
         <div class="flex flex-row space-x-10">
             <div class="flex flex-col space-y-5 w-full">

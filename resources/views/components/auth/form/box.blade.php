@@ -26,14 +26,17 @@
                     <x-landing.textButton route="register">
                         Belum punya akun?
                     </x-landing.textButton>
-                @else
+                    <x-landing.button>
+                        Masuk
+                    </x-landing.button>
+                    @else
                     <x-landing.textButton route="login">
                         Sudah punya akun?
                     </x-landing.textButton>
+                    <x-landing.button>
+                        Submit Registrasi
+                    </x-landing.button>
                 @endif
-                <x-landing.button>
-                    Masuk
-                </x-landing.button>
             </div>
         </form>
     </div>

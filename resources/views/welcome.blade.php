@@ -168,19 +168,35 @@
                         Lengkapi formulir dengan informasi pribadi (NISN, nama lengkap, dan sebagainya)
                     </x-landing.caraPendaftaranTile>
                     <x-landing.caraPendaftaranTile number=4>
-                        Semua peserta olimpiade wajib membayar biaya pendaftaran sebesar <br /> <span class="font-bold">Rp
+                        Semua peserta olimpiade wajib membayar biaya pendaftaran sebesar <br /> <span
+                            class="font-bold">Rp
                             75.000,-</span> <br />
                         <span class="text-custom-orange">ke Rekening 156-00-1445760-2 (Mandiri) <br />
                             an/ ASOSIASI GURU PENDIDIKAN AGAMA ISLAM</span>
                     </x-landing.caraPendaftaranTile>
                     <x-landing.caraPendaftaranTile number=5>
-                        Peserta dapat mengakses “Masuk Dashboard” dengan menggunakan email dan password yang telah telah dibuat
+                        Peserta dapat mengakses “Masuk Dashboard” dengan menggunakan email dan password yang telah telah
+                        dibuat
                     </x-landing.caraPendaftaranTile>
                     <x-landing.caraPendaftaranTile number=6>
                         Selamat, anda telah berhasil melakukan pendaftaran di Olimpiade AGPAII 2023!
                     </x-landing.caraPendaftaranTile>
                 </div>
             </div>
+        </div>
+    </div>
+    {{-- Section 5 --}}
+    <div class="bg-gradient-to-r from-custom-orange to-custom-light-orange-2 py-20 px-60 flex flex-row justify-between text-white items-center">
+        <div class="flex flex-col space-y-5 w-1/2">
+            <h1 class="text-4xl">Daftarkan dirimu sekarang juga!</h1>
+            <h2 class="text-base">OLPAIN 2023 adalah singkatan dari Olimpiade PAI Nasional AGPAII tahun 2023 yang
+                dilaksanakan secara berjenjang dari tingkat Provinsi hingga final tingkat Nasional</h2>
+        </div>
+        <div class="w-1/2 flex flex-row justify-end">
+            <a href="{{ route('register') }}"
+                class="border-[1px] border-white rounded-lg py-3 px-7 text-white text-base font-normal">Daftar
+                Sekarang
+                -></a>
         </div>
     </div>
 </x-guest-layout>
