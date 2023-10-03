@@ -37,7 +37,7 @@
                 </div>
             </div>
         </x-landing.container>
-        <div class="absolute hidden lg:block z-0 bottom-[-20%] right-[-20%]">
+        <div class="absolute hidden lg:block z-0 bottom-[-20%] right-[-35%]">
             <img src="{{ asset('images/vector-4.png') }}" alt="Vector 4" class="w-1/2">
         </div>
     </div>
@@ -101,7 +101,7 @@
         </div>
     </div>
     {{-- Section 4 --}}
-    <div class="flex flex-col lg:flex-row w-full pt-20 lg:py-32 h-[110vh] relative" id="cara-pendaftaran">
+    <div class="flex flex-col lg:flex-row w-full pt-20 lg:py-32 lg:h-[110vh] relative" id="cara-pendaftaran">
         <div class="bg-custom-white w-full flex flex-col pt-12 pb-20 px-10 lg:w-1/2 lg:grid lg:grid-cols-6 lg:gap-3 lg:py-32 lg:px-28 relative">
             <div class="absolute hidden lg:block z-0 bottom-0">
                 <img src="{{ asset('images/vector-3.png') }}" alt="Vector 3" class="w-auto opacity-50">
@@ -150,7 +150,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-white w-1/2 grid grid-cols-6 gap-3 py-32 px-28">
+        <div class="bg-white w-full py-16 px-10 lg:w-1/2 lg:grid lg:grid-cols-6 lg:gap-3 lg:py-32 lg:px-28">
             <div class="col-span-5 flex flex-col">
                 <div class="w-fit">
                     <div class="py-3 px-7 text-white bg-custom-orange rounded-full hover:bg-custom-orange">
@@ -171,7 +171,7 @@
                     <x-landing.caraPendaftaranTile number=4>
                         Semua peserta olimpiade wajib membayar biaya pendaftaran sebesar <br /> <span
                             class="font-bold">Rp
-                            75.000,-</span> <br />
+                            75.000,-</span>
                         <span class="text-custom-orange">ke Rekening 156-00-1445760-2 (Mandiri) <br />
                             an/ ASOSIASI GURU PENDIDIKAN AGAMA ISLAM</span>
                     </x-landing.caraPendaftaranTile>
@@ -187,13 +187,13 @@
         </div>
     </div>
     {{-- Section 5 --}}
-    <div class="bg-gradient-to-r from-custom-orange to-custom-light-orange-2 py-20 px-60 flex flex-row justify-between text-white items-center">
-        <div class="flex flex-col space-y-5 w-1/2">
-            <h1 class="text-4xl">Daftarkan dirimu sekarang juga!</h1>
+    <div class="bg-gradient-to-r from-custom-orange to-custom-light-orange-2 py-14 px-9 flex flex-col space-y-8 lg:space-y-0 lg:py-20 lg:px-60 lg:flex-row lg:justify-between text-white items-center">
+        <div class="flex flex-col space-y-5 lg:w-1/2">
+            <h1 class="text-2xl lg:text-4xl">Daftarkan dirimu sekarang juga!</h1>
             <h2 class="text-base">OLPAIN 2023 adalah singkatan dari Olimpiade PAI Nasional AGPAII tahun 2023 yang
                 dilaksanakan secara berjenjang dari tingkat Provinsi hingga final tingkat Nasional</h2>
         </div>
-        <div class="w-1/2 flex flex-row justify-end">
+        <div class="flex flex-row w-full items-start justify-start lg:w-1/2  lg:justify-end">
             <a href="{{ route('register') }}"
                 class="border-[1px] border-white rounded-lg py-3 px-7 text-white text-base font-normal">Daftar
                 Sekarang
