@@ -59,17 +59,18 @@
     {{-- Section 3 --}}
     <div class="relative">
         <x-landing.container>
-            <div class="py-36 grid grid-cols-12 gap-3" id="informasi">
-                <div class="col-span-5">
+            <div class="bg-white pt-32 flex flex-col lg:py-36 lg:grid lg:grid-cols-12 lg:gap-3" id="informasi">
+                <div class="lg:col-span-5">
                     <div class="flex flex-col text-black">
                         <img src="{{ asset('images/logo-3.png') }}" alt="Logo 3" class="w-60">
-                        <h1 class="font-normal text-3xl mt-8 mb-5">Olimpiade PAI Nasional AGPAII</h1>
+                        <h1 class="font-normal text-2xl lg:text-3xl mt-8 mb-5">Olimpiade PAI Nasional AGPAII <br />
+                            ke-2 Tahun 2023</h1>
                         <h2 class="text-base text-custom-black">OLPAIN 2023 adalah singkatan dari Olimpiade PAI
                             Nasional AGPAII tahun 2023 yang
                             dilaksanakan secara berjenjang dari tingkat Provinsi hingga final tingkat Nasional</h2>
-                        <div class="w-fit mt-9">
+                        <div class="w-fit mt-8 lg:mt-9">
                             <a href="{{ route('file.download', ['filename' => 'juknis.pdf']) }}"
-                                class="block py-3 px-7 bg-white border-custom-orange border-[1px] rounded-md text-custom-orange hover:bg-custom-orange hover:text-white transition-colors duration-300 ease-in-out">
+                                class="block py-3 px-7 bg-white border-custom-orange border-[1px] rounded-lg text-custom-orange hover:bg-custom-orange hover:text-white transition-colors duration-300 ease-in-out">
                                 <div class="flex flex-row space-x-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                         viewBox="0 0 24 24">
@@ -82,8 +83,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-2"></div>
-                <div class="col-span-3 space-y-8">
+                <div class="lg:col-span-2"></div>
+                <div class="flex flex-col mt-20 lg:col-span-3 space-y-8">
                     <h1 class="font-normal text-2xl">Timeline Olimpiade</h1>
                     <x-landing.timelineTile number=1 date="1 Oktober - 8 November" event="Pendaftaran Peserta"
                         :isActive='true' />
@@ -95,24 +96,24 @@
                 </div>
             </div>
         </x-landing.container>
-        <div class="absolute bottom-[-30%] z-0 right-0">
+        <div class="absolute bottom-[-25%] lg:bottom-[-30%] z-0 right-0">
             <img src="{{ asset('images/vector-5.png') }}" alt="Vector 5" class="w-max">
         </div>
     </div>
     {{-- Section 4 --}}
-    <div class="flex flex-row w-full py-32 h-[110vh] relative" id="cara-pendaftaran">
-        <div class="bg-custom-white w-1/2 grid grid-cols-6 gap-3 py-32 px-28 relative">
-            <div class="absolute z-0 bottom-0">
+    <div class="flex flex-col lg:flex-row w-full pt-20 lg:py-32 h-[110vh] relative" id="cara-pendaftaran">
+        <div class="bg-custom-white w-full flex flex-col pt-12 pb-20 px-10 lg:w-1/2 lg:grid lg:grid-cols-6 lg:gap-3 lg:py-32 lg:px-28 relative">
+            <div class="absolute hidden lg:block z-0 bottom-0">
                 <img src="{{ asset('images/vector-3.png') }}" alt="Vector 3" class="w-auto opacity-50">
             </div>
-            <div class="text-custom-black font-normal col-span-5 z-10">
+            <div class="text-custom-black font-normal lg:col-span-5 z-10">
                 <div class="flex flex-col space-y-4">
-                    <h1 class="text-3xl">Pastikan kamu sudah <br>
+                    <h1 class="text-2xl lg:text-3xl">Pastikan kamu sudah <br>
                         memenuhi persyaratan berikut,</h1>
                     <h2 class="text-base">Persyaratan ini digunakan untuk memberikan pengalaman olimpiade yang
                         seadil-adilnya.</h2>
                 </div>
-                <div class="flex flex-col space-y-6 mt-14">
+                <div class="flex flex-col space-y-6 mt-12 lg:mt-14">
                     <x-landing.syaratTile>
                         <div class="bg-custom-light-orange text-custom-orange p-2 rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -124,11 +125,11 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="flex flex-col space-y-2">
-                            <h2 class="text-base font-normal text-black">Peserta merupakan Pelajar Islam jenjang SD,
+                        <div class="flex flex-col space-y-2 text-sm lg:text-base font-normal">
+                            <h2 class="text-black">Peserta merupakan Pelajar Islam jenjang SD,
                                 SMP dan SMA/SMK aktif di
                                 Indonesia </h2>
-                            <h3 class="text-base font-normal text-custom-orange">Dibuktikan melalui lampiran Kartu
+                            <h3 class="text-custom-orange">Dibuktikan melalui lampiran Kartu
                                 Tanda Pelajar
                                 / Surat Keterangan Pelajar Aktif</h3>
                         </div>
@@ -144,7 +145,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <h2 class="text-base">Peserta merupakan individu/perorangan bukan kelompok</h2>
+                        <h2 class="text-sm lg:text-base">Peserta merupakan individu/perorangan bukan kelompok</h2>
                     </x-landing.syaratTile>
                 </div>
             </div>
