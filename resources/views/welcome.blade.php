@@ -5,7 +5,7 @@
             <img src="{{ asset('images/vector-3.png') }}" alt="Vector 3" class="w-auto">
         </div>
         <x-landing.container>
-            <div class="h-[80vh] w-full z-10 flex flex-col lg:justify-between pt-24 lg:pt-40 pb-20">
+            <div class="lg:h-[80vh] w-full z-10 flex flex-col lg:justify-between pt-24 lg:pt-40 pb-20">
                 <div class="flex flex-col mx-auto items-center text-black text-center h-full">
                     <h2 class="text-base tracking-widest lg:tracking-normal lg:text-xl font-normal">Selamat Datang di</h2>
                     <h1 class="text-4xl lg:text-6xl font-normal mt-6 leading-tight">Olimpiade PAI Nasional AGPAII <br />ke-2 Tahun
