@@ -1,17 +1,17 @@
 <x-guest-layout>
     {{-- Section 1 --}}
     <div class="relative">
-        <div class="absolute z-0">
+        <div class="absolute z-0 left-[-65%] lg:left-0">
             <img src="{{ asset('images/vector-3.png') }}" alt="Vector 3" class="w-auto">
         </div>
         <x-landing.container>
-            <div class="h-[80vh] w-full z-10 flex flex-col justify-between pt-40 pb-20">
+            <div class="h-[80vh] w-full z-10 flex flex-col lg:justify-between pt-24 lg:pt-40 pb-20">
                 <div class="flex flex-col mx-auto items-center text-black text-center h-full">
-                    <h2 class="text-xl font-normal">Selamat Datang di</h2>
-                    <h1 class="text-6xl font-normal mt-6 leading-tight">Olimpiade PAI Nasional AGPAII <br />ke-2 Tahun
+                    <h2 class="text-base tracking-widest lg:tracking-normal lg:text-xl font-normal">Selamat Datang di</h2>
+                    <h1 class="text-4xl lg:text-6xl font-normal mt-6 leading-tight">Olimpiade PAI Nasional AGPAII <br />ke-2 Tahun
                         2023
                     </h1>
-                    <div class="flex flex-row items-center space-x-6 mt-10">
+                    <div class="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-6 mt-10">
                         <x-landing.textButton route="#informasi">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor"
@@ -24,7 +24,7 @@
                         </x-landing.button>
                     </div>
                 </div>
-                <div class="flex flex-row justify-center">
+                <div class="flex flex-row justify-center mt-40">
                     <div class="flex flex-col space-y-6">
                         <h3 class="font-normal text-base text-center">Kegiatan ini didukung oleh,</h3>
                         <div class="flex flex-row space-x-4">
@@ -37,22 +37,22 @@
                 </div>
             </div>
         </x-landing.container>
-        <div class="absolute z-0 bottom-[-20%] right-[-20%]">
+        <div class="absolute hidden lg:block z-0 bottom-[-20%] right-[-20%]">
             <img src="{{ asset('images/vector-4.png') }}" alt="Vector 4" class="w-1/2">
         </div>
     </div>
     {{-- Section 2 --}}
     <div class="relative bg-custom-orange">
         <div class="absolute z-0">
-            <img src="{{ asset('images/vector-6.png') }}" alt="Vector 6" class="w-3/5">
+            <img src="{{ asset('images/vector-6.png') }}" alt="Vector 6" class="lg:w-3/5">
         </div>
-        <div class="flex flex-row justify-center items-center py-11 z-10">
-            <div class="flex flex-col text-white font-light text-xl text-center w-1/3">
+        <div class="flex flex-row justify-center items-center py-9 px-12 lg:px-0 lg:py-11 z-10">
+            <div class="flex flex-col text-white font-light text-xl text-center w-full lg:w-1/3">
                 <h3 class="uppercase font-semibold text-sm">Tema Kegiatan</h3>
-                <h2 class="font-semibold text-2xl mt-6 mb-16">“Meningkatkan Kompetisi dan Kompetensi Pelajar Pancasila
+                <h2 class="font-semibold text-base lg:text-2xl mt-7 mb-7 lg:mt-6 lg:mb-16">“Meningkatkan Kompetisi dan Kompetensi Pelajar Pancasila
                     yang Berlandaskan Nilai-Nilai Moderasi Beragama
                     untuk Masa Depan Indonesia”</h2>
-                <h2 class="text-base uppercase">DPP ASOSIASI GURU PENDIDIKAN AGAMA ISLAM INDONESIA (AGPAII)</h2>
+                <h2 class="text-sm lg:text-base uppercase">DPP ASOSIASI GURU PENDIDIKAN AGAMA ISLAM INDONESIA (AGPAII)</h2>
             </div>
         </div>
     </div>

@@ -1,10 +1,10 @@
-<nav class="bg-white mx-[120px]">
+<nav class="bg-white pt-16 pb-5 mx-6 lg:pt-0 lg:mx-[120px]">
     <div class="flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" class="flex items-center">
             <img src="{{ asset('images/logo-3.png') }}" alt="Logo 3" class="w-44" />
         </a>
         <button data-collapse-toggle="navbar-default" type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            class="inline-flex items-center w-10 h-10 justify-center text-sm text-custom-grey rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
