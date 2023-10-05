@@ -19,8 +19,8 @@
                             </svg>
                             <h3 class="text-base">Informasi Olimpiade</h3>
                         </x-landing.textButton>
-                        <x-landing.button route="register">
-                            Daftar Sekarang ->
+                        <x-landing.button background="bg-custom-orange" border='border-transparent' textColor='text-white' hover='hover:bg-custom-orange/80' route="register">
+                            <h2 class="font-bold">Daftar Sekarang -></h2>
                         </x-landing.button>
                     </div>
                 </div>
@@ -194,10 +194,9 @@
                 dilaksanakan secara berjenjang dari tingkat Provinsi hingga final tingkat Nasional</h2>
         </div>
         <div class="flex flex-row w-full items-start justify-start lg:w-1/2  lg:justify-end">
-            <a href="{{ route('register') }}"
-                class="border-[1px] border-white rounded-lg py-3 px-7 text-white text-base font-normal">Daftar
-                Sekarang
-                -></a>
+            <x-landing.button background='bg-transparent' border='border-white border-[1px]' textColor='text-white' hover='hover:bg-white hover:text-custom-orange' route="register">
+                Daftar Sekarang ->
+            </x-landing.button>
         </div>
     </div>
 </x-guest-layout>

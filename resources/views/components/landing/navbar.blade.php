@@ -32,7 +32,7 @@
                     </x-landing.textButton>
                 </li>
                 <li>
-                    <x-landing.button route="login">
+                    <x-landing.button background="bg-custom-orange" border='border-transparent' textColor='text-white' hover='hover:bg-custom-orange/80' route="login">
                         <h2 class="font-bold">Masuk Dashboard</h2>
                     </x-landing.button>
                 </li>
