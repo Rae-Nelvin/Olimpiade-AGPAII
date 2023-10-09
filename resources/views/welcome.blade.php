@@ -173,7 +173,7 @@
                             class="font-bold">Rp
                             75.000,-</span>
                         <span class="text-custom-orange">ke Rekening 156-00-1445760-2 (Mandiri) <br />
-                            an/ ASOSIASI GURU PENDIDIKAN AGAMA ISLAM</span>
+                            an/ ASOSIASI GURU PENDIDIKAN AGAMA ISLAM INDONESIA</span>
                     </x-landing.caraPendaftaranTile>
                     <x-landing.caraPendaftaranTile number=5>
                         Peserta dapat mengakses “Masuk Dashboard” dengan menggunakan email dan password yang telah telah

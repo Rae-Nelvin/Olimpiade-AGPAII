@@ -15,7 +15,7 @@
                 <x-auth.form.formInput label="Bukti Pembayaran" type="file" name="foto_bukti_pembayaran" />
                 <p class="text-custom-orange font-normal text-xs">Pendaftaran sebesar <span
                         class="font-semibold">Rp75.000</span> ke Rekening <span class="font-semibold">156-00-1445760-2
-                        (Mandiri) an/ ASOSIASI GURU PENDIDIKAN AGAMA ISLAM</span></p>
+                        (Mandiri) an/ ASOSIASI GURU PENDIDIKAN AGAMA ISLAM INDONESIA</span></p>
             </div>
         </div>
     </x-auth.form.box>

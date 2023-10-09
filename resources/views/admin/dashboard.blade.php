@@ -13,7 +13,7 @@
                         kominikasi
                         antara peserta dan panitia.</p>
                     <div class="w-fit">
-                        <x-landing.button href="#">Masuk Telegram</x-landing.button>
+                        <x-landing.button route="https://t.me/+6WUcT3Y8Q7wwYmFl">Masuk Telegram</x-landing.button>
                     </div>
                 </div>
             </x-admin.box>
