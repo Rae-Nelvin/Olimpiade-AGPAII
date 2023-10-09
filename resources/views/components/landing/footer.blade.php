@@ -10,7 +10,7 @@
         </div>
         <ul class="space-y-2 lg:mt-10 text-base font-light">
             <li>
-                <a href="/" class="font-semibold">Olimpiade</a>
+                <a href="/" class="font-semibold">OLPAIN 2023</a>
             </li>
             <li>
                 <a href="/">Beranda</a>
@@ -21,19 +21,22 @@
             <li>
                 <a href="#cara-pendaftaran">Cara Pendaftaran</a>
             </li>
+            <li>
+                <a href="https://kurasi-pusatprestasinasional.kemdikbud.go.id/">Web Puspresnas</a>
+            </li>
         </ul>
         <ul class="space-y-2 mt-10 text-base">
             <li>
                 <h3 class="font-semibold">Khoirul Fahmi</h3>
             </li>
             <li>
-                <h3 class="font-light">+62857 0714 5129</a>
+                <a class="font-light" href="https://wa.me/6285707145129?text=Hello">+62857 0714 5129</a>
             </li>
             <li>
                 <h3 class="font-semibold">Budi Sulistyo</h3>
             </li>
             <li>
-                <h3 class="font-light">+62896 3031 1098</h3>
+                <a class="font-light" href="https://wa.me/6289630311098?text=Hello">+62896 3031 1098</a>
             </li>
         </ul>
         <div class="flex flex-col space-y-6 lg:mt-10">
