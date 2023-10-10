@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <div class="w-fit">
-                            <a href="{{ route('file.download', ['filename' => 'juknis.pdf']) }}"
+                            <a href="{{ route('file.download', ['filename' => 'juknis-olpain-2023.pdf']) }}"
                                 class="block py-3 px-7 bg-white border-custom-orange border-[1px] rounded-lg text-custom-orange hover:bg-custom-orange hover:text-white transition-colors duration-300 ease-in-out">
                                 <div class="flex flex-row space-x-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
