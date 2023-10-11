@@ -1,10 +1,11 @@
-<div class="col-span-6 flex flex-col text-white justify-between">
+<div class="lg:col-span-6 my-16 mx-6 lg:m-0 flex flex-col text-white justify-between">
     <a href="/" class="font-normal text-base"><- Beranda</a>
             <div class="flex flex-col space-y-6">
-                <h2 class="font-normal text-xl">2023</h2>
-                <h1 class="font-semibold text-6xl leading-snug">Olimpiade PAI Nasional <br />AGPAII Ke-2 Tahun 2023</h1>
+                <h2 class="hidden lg:block font-normal text-xl">2023</h2>
+                <h1 class="font-normal lg:font-semibold text-4xl lg:text-6xl leading-snug">Olimpiade PAI Nasional AGPAII
+                    Ke-2 Tahun 2023</h1>
             </div>
-            <div class="flex flex-col">
+            <div class="hidden lg:flex flex-col">
                 <h2 class="font-normal text-base mb-4">Organized by</h2>
                 <div class="flex flex-col space-y-6">
                     <div class="flex flex-row space-x-4 items-center">

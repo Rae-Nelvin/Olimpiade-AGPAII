@@ -15,16 +15,17 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body class="font-manrope antialiased h-screen relative flex flex-row">
-    <div class="w-2/3 bg-custom-orange h-full">
+<body class="font-manrope antialiased h-screen relative flex flex-col lg:flex-row">
+    <div class="w-full lg:w-2/3 bg-custom-orange h-1/2 lg:h-full">
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('images/vector-2.png') }}" alt="Vector 2" class="w-1/2">
+            <img src="{{ asset('images/vector-2.png') }}" alt="Vector 2" class="w-full lg:w-1/2">
         </div>
     </div>
-    <div class="w-1/3 bg-white h-full"></div>
-    <div class="absolute inset-0 z-10 m-[120px] grid grid-cols-12 gap-5">
+    <div class="w-full lg:w-1/3 bg-white h-full"></div>
+    <div class="absolute inset-0 z-10 lg:m-[120px] flex flex-col lg:grid lg:grid-cols-12 lg:gap-5">
         <x-auth.leftSide />
         {{ $slot }}
+        <x-auth.footer />
     </div>
 </body>
 

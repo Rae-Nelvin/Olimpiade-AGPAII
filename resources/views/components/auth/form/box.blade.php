@@ -1,13 +1,13 @@
 <div class="{{ $colSpan }} flex flex-col justify-center">
-    <div class="bg-white flex flex-col rounded-2xl py-14 px-12 shadow-black/5 shadow-xl">
-        <div class="flex {{ $colSpan == 'col-span-4' ? 'flex-col space-y-9' : 'flex-row' }} justify-between items-start">
+    <div class="bg-white flex flex-col py-16 px-8 lg:rounded-2xl lg:py-14 lg:px-12 lg:shadow-black/5 lg:shadow-xl">
+        <div class="flex flex-col lg:{{ $colSpan == 'col-span-4' ? 'flex-col space-y-9' : 'flex-row' }} justify-between items-start">
             <div class="flex flex-col space-y-3">
                 <h2 class="uppercase text-custom-grey font-semibold text-sm">{{ $subtitle }}</h2>
                 <h1 class="text-black font-normal text-3xl">{{ $title }}</h1>
             </div>
             @if ($errors->any())
                 <div
-                    class="bg-custom-light-red rounded-md text-custom-red py-3 px-5 flex flex-row space-x-2 {{ $colSpan == 'col-span-4' ? 'w-full' : 'w-1/3' }} items-center">
+                    class="bg-custom-light-red rounded-md text-custom-red py-3 px-5 flex flex-row space-x-2 w-full mt-6 lg:my-0 lg:{{ $colSpan == 'col-span-4' ? 'w-full' : 'w-1/3' }} items-center">
                     <div class="w-fit">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path fill="currentColor"
@@ -21,7 +21,7 @@
         <form action="{{ route($action) }}" method="POST" class="{{ $formClass }}" enctype="multipart/form-data">
             @csrf
             {{ $slot }}
-            <div class="flex flex-row pl-6 space-x-20 mt-9 justify-end">
+            <div class="flex flex-row pl-9 lg:pl-6 space-x-10 lg:space-x-20 mt-12 lg:mt-9 justify-end">
                 @if ($action == 'login')
                     <x-landing.textButton route="register">
                         Belum punya akun?
@@ -33,8 +33,8 @@
                     <x-landing.textButton route="login">
                         Sudah punya akun?
                     </x-landing.textButton>
-                    <x-landing.button>
-                        Submit Registrasi
+                    <x-landing.button background="bg-custom-orange" border='border-transparent' textColor='text-white' hover='hover:bg-custom-orange/80'>
+                        Daftarkan
                     </x-landing.button>
                 @endif
             </div>
