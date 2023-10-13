@@ -130,14 +130,15 @@
                 </div>
                 <div class="lg:col-span-2"></div>
                 <div class="flex flex-col mt-20 lg:col-span-3 space-y-8">
-                    <h1 class="font-normal text-2xl">Timeline Olimpiade</h1>
-                    <x-landing.timelineTile number=1 date="1 Oktober - 8 November" event="Pendaftaran Peserta"
+                    <h1 class="font-normal text-2xl">Timeline OLPAIN 2023</h1>
+                    <x-landing.timelineTile number=1 date="1 Oktober - 15 November 2023" event="Pendaftaran Peserta"
                         :isActive='true' />
-                    <x-landing.timelineTile number=2 date="14 November" event="Penyisihan Provinsi" />
-                    <x-landing.timelineTile number=3 date="17 November" event="Pengumuman Provinsi" />
-                    <x-landing.timelineTile number=4 date="20 November" event="Technical Meeting Final" />
-                    <x-landing.timelineTile number=5 date="16 Desember" event="Final (Kota Malang)" />
-                    <x-landing.timelineTile number=6 date="17 Desember" event="Awarding & Closing Ceremony" />
+                    <x-landing.timelineTile number=2 date="18 November 2023" event="Technical Meeting & <br /> Rilis Password E-Ujian" />
+                    <x-landing.timelineTile number=3 date="20 November 2023" event="Penyisihan Provinsi" />
+                    <x-landing.timelineTile number=4 date="24 November 2023" event="Pengumuman Provinsi" />
+                    <x-landing.timelineTile number=5 date="26 November 2023" event="Technical Meeting Final" />
+                    <x-landing.timelineTile number=6 date="16 Desember 2023" event="Final (Kota Malang)" />
+                    <x-landing.timelineTile number=7 date="17 Desember 2023" event="Awarding & Closing Ceremony" />
                 </div>
             </div>
         </x-landing.container>
@@ -146,7 +147,7 @@
         </div>
     </div>
     {{-- Section 4 --}}
-    <div class="flex flex-col lg:flex-row w-full pt-20 lg:py-32 lg:h-[110vh] relative" id="cara-pendaftaran">
+    <div class="flex flex-col lg:flex-row w-full pt-20 lg:pt-0 lg:pb-32 lg:h-[110vh] relative" id="cara-pendaftaran">
         <div
             class="bg-custom-white w-full flex flex-col pt-12 pb-20 px-10 lg:w-1/2 lg:grid lg:grid-cols-6 lg:gap-3 lg:py-32 lg:px-28 relative">
             <div class="absolute hidden lg:block z-0 bottom-0">
