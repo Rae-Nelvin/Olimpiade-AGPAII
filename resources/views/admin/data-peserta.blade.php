@@ -28,10 +28,10 @@
                         <td>{{ $data->user->name }}</td>
                         <td>{{ $data->asal_sekolah }}</td>
                         <td>{{ $data->user->email }}</td>
-                        <td>IMG_0325</td>
-                        <td>IMG_2352</td>
+                        <td><x-admin.image-modal :imageUrl="$data->foto_kartu_pelajar" /></td>
+                        <td><x-admin.image-modal :imageUrl="$data->foto_bukti_pembayaran" /></td>
                         <td class="flex flex-row space-x-2 w-fit py-6">
-                            <x-admin.delete-modal :id="$data->id" />
+                            <x-admin.delete-modal :id="$data->user->id" />
                         </td>
                     </tr>
                 @endforeach

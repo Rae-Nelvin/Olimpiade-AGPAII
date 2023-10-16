@@ -62,8 +62,8 @@ class RegisteredUserController extends Controller
 
         $randomDirectoryName = Str::random(20);
 
-        $foto_kartu_pelajar = $request->file('foto_kartu_pelajar')->store("{$randomDirectoryName}/foto_kartu_pelajar");
-        $foto_bukti_pembayaran = $request->file('foto_bukti_pembayaran')->store("{$randomDirectoryName}/foto_bukti_pembayaran");
+        $foto_kartu_pelajar = $request->file('foto_kartu_pelajar')->store("{$randomDirectoryName}/foto_kartu_pelajar", 'public');
+        $foto_bukti_pembayaran = $request->file('foto_bukti_pembayaran')->store("{$randomDirectoryName}/foto_bukti_pembayaran", 'public');
 
         $participant = ParticipantDetail::create([
             'user_id' => $user->id,
