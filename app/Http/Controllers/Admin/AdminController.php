@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\ParticipantDetail;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\DB;
@@ -25,7 +26,8 @@ class AdminController extends Controller
 
     public function dataPesertaIndex()
     {
-        $results = ParticipantDetail::paginate(10);
+        $results = ParticipantDetail::whereHas('user', function ($query) {
+            $query->whereNull('deleted_at');})->paginate(10);
 
         return view('admin.data-peserta', compact('results'));
     }
@@ -126,6 +128,8 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect()->back();
     }
 }

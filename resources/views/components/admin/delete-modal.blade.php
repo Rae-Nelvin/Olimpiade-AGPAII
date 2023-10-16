@@ -19,10 +19,16 @@
                         </svg>
                     </div>
                     <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Apakah anda yakin ingin menghapus {{ $user->name }}?</h3>
-                    <button @click="showDeleteModal = false" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
-                        Ya, Hapus
-                    </button>
-                    <button @click="showDeleteModal = false" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Tidak, Batalkan</button>
+                    <div class="flex flex-row space-x-4 justify-center items-center mt-10">
+                        <form action="{{ route('delete-participant', $user->id) }}" method="POST">
+                            @csrf @method('DELETE')
+                            <input type="hidden" value="{{ $user->id }}" />
+                            <button @click="showDeleteModal = false" type="submit" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                                Ya, Hapus
+                            </button>
+                        </form>
+                        <button @click="showDeleteModal = false" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Tidak, Batalkan</button>
+                    </div>
                 </div>
             </div>
         </div>

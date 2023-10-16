@@ -33,6 +33,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard-admin', [AdminController::class, 'index'])->name('dashboard-admin');
 
     Route::get('/data-peserta', [AdminController::class, 'dataPesertaIndex'])->name('data-peserta');
+    Route::delete('/data-peserta/{id}', [AdminController::class, 'destroy'])->name('delete-participant');
 });
 
 
