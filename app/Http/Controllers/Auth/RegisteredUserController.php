@@ -44,6 +44,11 @@ class RegisteredUserController extends Controller
             'foto_kartu_pelajar' => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
             'foto_bukti_pembayaran' => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
             'phone_number' => ['required', 'string', 'regex:/^08\d{9,12}$/'],
+        ], [
+            'asal_sekolah.required' => 'Asal Sekolah field is required',
+            'phone_number.required' => 'Nomor Handphone is required',
+            'foto_kartu_pelajar.required' => 'Kartu Pelajar must be an image file (jpeg/png)',
+            'foto_bukti_pembayaran.required' => 'Bukti Pembayaran must be an image file (jpeg/png)',
         ]);
 
         $data = $request->all();
