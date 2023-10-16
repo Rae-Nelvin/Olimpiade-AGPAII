@@ -31,10 +31,7 @@
                         <td>IMG_0325</td>
                         <td>IMG_2352</td>
                         <td class="flex flex-row space-x-2 w-fit py-6">
-                            {{-- <a href="#"
-                                class="border border-custom-light-orange text-custom-orange py-1 px-2 font-normal text-xs rounded-md hover:bg-custom-orange hover:text-white duration-300 ease-in-out">Edit</a> --}}
-                            <a href="#"
-                                class="bg-custom-red text-white py-1 px-2 font-normal text-xs rounded-md">Delete</a>
+                            <x-admin.delete-modal :id="$data->id" />
                         </td>
                     </tr>
                 @endforeach
