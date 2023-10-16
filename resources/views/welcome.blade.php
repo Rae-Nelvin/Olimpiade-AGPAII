@@ -88,7 +88,7 @@
                                     <h2 class="font-bold">Tahap Pertama - Penyisihan Provinsi</h2>
                                     <h3 class="font-normal">Materi pada tahap penyisihan yaitu materi PAI jenjang SD,
                                         SMP dan SMA/SMK
-                                        (Kurikulum Merdeka Fase E dan F serta Materi Moderasi Beragama)</h3>
+                                        (Kurikulum Merdeka Fase sesuai dengan jenjang masing - masing)</h3>
                                 </div>
                             </div>
                             <div class="flex flex-row space-x-4 items-start">
@@ -220,11 +220,11 @@
                         Lengkapi formulir dengan informasi pribadi (NISN, nama lengkap, dan sebagainya)
                     </x-landing.caraPendaftaranTile>
                     <x-landing.caraPendaftaranTile number=4>
-                        Semua peserta olimpiade wajib membayar biaya pendaftaran sebesar <br /> <span
+                        Semua peserta olimpiade wajib membayar biaya pendaftaran sebesar <span
                             class="font-bold">Rp
-                            75.000,-</span>
-                        <span class="text-custom-orange">ke Rekening 156-00-1445760-2 (Mandiri) <br />
-                            an/ ASOSIASI GURU PENDIDIKAN AGAMA ISLAM INDONESIA</span>
+                            75.000,-</span> <br />
+                        <span class="text-custom-orange">ke Rekening 7766336668 (Bank Syariah Indonesia) <br />
+                            a.n. Asosiasi Guru PAI Indonesia</span>
                     </x-landing.caraPendaftaranTile>
                     <x-landing.caraPendaftaranTile number=5>
                         Peserta dapat mengakses “Masuk Dashboard” dengan menggunakan email dan password yang telah telah
