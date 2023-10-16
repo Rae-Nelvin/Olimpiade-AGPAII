@@ -9,17 +9,19 @@ class FormInput extends Component
     public $label;
     public $type;
     public $name;
+    public $isPassword;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(string $label, string $type, string $name)
+    public function __construct(string $label, string $type, string $name, bool $isPassword = false)
     {
         $this->label = $label;
         $this->type = $type;
         $this->name = $name;
+        $this->isPassword = $isPassword;
     }
 
     /**
@@ -33,6 +35,7 @@ class FormInput extends Component
             'label' => $this->label,
             'type' => $this->type,
             'name' => $this->name,
+            'isPassword' => $this->isPassword,
         ]);
     }
 }
