@@ -23,7 +23,7 @@
                 @foreach ($results as $data)
                     <tr>
                         <td class="p-6">{{ $loop->iteration }}</td>
-                        <td>{{ \Carbon\Carbon::parse($data->created_at)->format('d/m/y H:i') }}</td>
+                        <td>{{ \Carbon\Carbon::parse($data->user->created_at)->format('d/m/y H:i') }}</td>
                         <td>{{ $data->nisn }}</td>
                         <td>{{ $data->user->name }}</td>
                         <td>{{ $data->asal_sekolah }}</td>

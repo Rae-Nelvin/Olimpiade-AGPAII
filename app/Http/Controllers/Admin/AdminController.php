@@ -19,7 +19,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $totalPendaftar = ParticipantDetail::count();
+        $totalPendaftar = ParticipantDetail::whereHas('user', function ($query) {
+            $query->whereNull('deleted_at');})->count();
 
         return view('admin.dashboard', compact('totalPendaftar'));
     }
