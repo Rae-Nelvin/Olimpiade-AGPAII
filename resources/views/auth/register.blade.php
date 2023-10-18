@@ -3,7 +3,7 @@
         formClass="mt-9">
         <div class="flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-10">
             <div class="flex flex-col space-y-5 w-full">
-                <x-auth.form.formInput label="NISN (Nomor Induk Siswa Nasional)" type="number" name="nisn" />
+                <x-auth.form.formInput label="NISN (Nomor Induk Siswa Nasional)" type="string" name="nisn" />
                 <x-auth.form.formInput label="Nama Lengkap" type="text" name="name" />
                 <x-auth.form.formInput label="E-mail" type="email" name="email" />
                 <x-auth.form.formInput label="Kartu Pelajar" type="file" name="foto_kartu_pelajar" />
