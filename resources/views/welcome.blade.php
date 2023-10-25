@@ -113,17 +113,31 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-fit">
-                            <a href="{{ route('file.download', ['filename' => 'juknis-olpain-2023.pdf']) }}"
-                                class="block py-3 px-7 bg-white border-custom-orange border-[1px] rounded-lg text-custom-orange hover:bg-custom-orange hover:text-white transition-colors duration-300 ease-in-out">
-                                <div class="flex flex-row space-x-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24">
-                                        <path fill="currentColor"
-                                            d="M10 14h4v-2h-4v2Zm0-3h8V9h-8v2Zm0-3h8V6h-8v2ZM8 18q-.825 0-1.413-.588T6 16V4q0-.825.588-1.413T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.588 1.413T20 18H8Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.413-.588T2 20V6h2v14h14v2H4ZM8 4v12V4Z" />
-                                    </svg>
-                                    <h3 class="text-base">Unduh Juknis</h3>
-                                </div>
+                        <div class="flex flex-row items-center space-x-6">
+                            <div class="w-fit">
+                                <a href="{{ route('file.download', ['filename' => 'juknis-olpain-2023.pdf']) }}"
+                                    class="block py-3 px-7 bg-white border-custom-orange border-[1px] rounded-lg text-custom-orange hover:bg-custom-orange hover:text-white transition-colors duration-300 ease-in-out">
+                                    <div class="flex flex-row space-x-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M10 14h4v-2h-4v2Zm0-3h8V9h-8v2Zm0-3h8V6h-8v2ZM8 18q-.825 0-1.413-.588T6 16V4q0-.825.588-1.413T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.588 1.413T20 18H8Zm0-2h12V4H8v12Zm-4 6q-.825 0-1.413-.588T2 20V6h2v14h14v2H4ZM8 4v12V4Z" />
+                                        </svg>
+                                        <h3 class="text-base">Unduh Juknis</h3>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="{{ route('file.download', ['filename' => 'kisi-sd-olpain-2023.pdf']) }}"
+                                class="underline cursor-pointer text-custom-orange hover:text-custom-light-orange-2">
+                                Kisi-Kisi SD
+                            </a>
+                            <a href="{{ route('file.download', ['filename' => 'kisi-smp-olpain-2023.pdf']) }}"
+                                class="underline cursor-pointer text-custom-orange hover:text-custom-light-orange-2">
+                                Kisi-Kisi SMP
+                            </a>
+                            <a href="{{ route('file.download', ['filename' => 'kisi-smasmk-olpain-2023.pdf']) }}"
+                                class="underline cursor-pointer text-custom-orange hover:text-custom-light-orange-2">
+                                Kisi-Kisi SMA/SMK
                             </a>
                         </div>
                     </div>
@@ -133,7 +147,8 @@
                     <h1 class="font-normal text-2xl">Timeline OLPAIN 2023</h1>
                     <x-landing.timelineTile number=1 date="1 Oktober - 15 November 2023" event="Pendaftaran Peserta"
                         :isActive='true' />
-                    <x-landing.timelineTile number=2 date="18 November 2023" event="Technical Meeting & <br /> Rilis Password E-Ujian" />
+                    <x-landing.timelineTile number=2 date="18 November 2023"
+                        event="Technical Meeting & <br /> Rilis Password E-Ujian" />
                     <x-landing.timelineTile number=3 date="20 November 2023" event="Penyisihan Provinsi" />
                     <x-landing.timelineTile number=4 date="24 November 2023" event="Pengumuman Provinsi" />
                     <x-landing.timelineTile number=5 date="26 November 2023" event="Technical Meeting Final" />
@@ -220,8 +235,7 @@
                         Lengkapi formulir dengan informasi pribadi (NISN, nama lengkap, dan sebagainya)
                     </x-landing.caraPendaftaranTile>
                     <x-landing.caraPendaftaranTile number=4>
-                        Semua peserta olimpiade wajib membayar biaya pendaftaran sebesar <span
-                            class="font-bold">Rp
+                        Semua peserta olimpiade wajib membayar biaya pendaftaran sebesar <span class="font-bold">Rp
                             75.000,-</span> <br />
                         <span class="text-custom-orange">ke Rekening 7766336668 (Bank Syariah Indonesia) <br />
                             a.n. Asosiasi Guru PAI Indonesia</span>
