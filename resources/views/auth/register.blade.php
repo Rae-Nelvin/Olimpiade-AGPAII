@@ -5,6 +5,7 @@
             <div class="flex flex-col space-y-5 w-full">
                 <x-auth.form.formInput label="NISN (Nomor Induk Siswa Nasional)" type="string" name="nisn" />
                 <x-auth.form.formInput label="Nama Lengkap" type="text" name="name" />
+                <x-auth.form.formSelect label="Asal Provinsi" name="province_id" :datas="$provinces" />
                 <x-auth.form.formInput label="E-mail" type="email" name="email" />
                 <x-auth.form.formInput label="Kartu Pelajar (jpeg/png)" type="file" name="foto_kartu_pelajar" />
             </div>

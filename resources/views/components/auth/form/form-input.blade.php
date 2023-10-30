@@ -4,7 +4,7 @@
         <div
             class="relative border-[1px] {{ $errors->has($name) ? 'bg-custom-light-red' : 'bg-transparent' }} border-custom-orange focus:ring-custom-orange focus:border-custom-orange focus:bg-custom-light-orange rounded-lg autofill:bg-custom-light-orange">
             <input name="password" placeholder="" :type="show ? 'password' : 'text'"
-                class="py-3 px-5 text-md block w-full rounded-lg ring-0 focus:border-0 focus:ring-0">
+                class="py-3 px-5 text-md block w-full rounded-lg ring-0 focus:border-0 focus:ring-0" required>
             <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
                 <svg class="h-6 text-gray-700" fill="none" @click="show = !show"
                     :class="{ 'hidden': !show, 'block': show }" xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@
             <label for="{{ $label }}" class="font-normal text-base text-custom-black">{{ $label }}</label>
             <input type="{{ $type }}" name="{{ $name }}" value="{{ old($name) }}"
                 class="border-[1px] {{ $errors->has($name) ? 'bg-custom-light-red' : 'bg-transparent' }} border-custom-orange focus:ring-custom-orange focus:border-custom-orange focus:bg-custom-light-orange rounded-lg autofill:bg-custom-light-orange"
-                placeholder="{{ $label }}" />
+                placeholder="{{ $label }}" required />
         </div>
     @else
         <div class="flex flex-col space-y-4">
@@ -37,7 +37,7 @@
                 class="font-normal text-base text-custom-black">{{ $label }}</label>
             <input type="{{ $type }}" name="{{ $name }}" value="{{ old($name) }}"
                 class="py-3 px-5 border-[1px] {{ $errors->has($name) ? 'bg-custom-light-red' : 'bg-transparent' }} border-custom-orange focus:ring-custom-orange focus:border-custom-orange focus:bg-custom-light-orange rounded-lg autofill:bg-custom-light-orange"
-                placeholder="{{ $label }}" />
+                placeholder="{{ $label }}" reqiured />
         </div>
     @endif
 @endif

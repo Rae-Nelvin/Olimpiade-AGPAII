@@ -9,7 +9,7 @@
                 <div class="flex flex-col mx-auto items-center text-black text-center h-full">
                     <h2 class="text-base tracking-widest lg:tracking-normal lg:text-xl font-normal">Selamat Datang di
                     </h2>
-                    <h1 class="text-4xl lg:text-6xl font-normal mt-6 leading-tight">OLIMPIADE PAI Nasional AGPAII
+                    <h1 class="text-4xl lg:text-6xl font-normal mt-6 leading-tight">Olimpiade PAI Nasional AGPAII
                         <br />ke-2 Tahun
                         2023
                     </h1>

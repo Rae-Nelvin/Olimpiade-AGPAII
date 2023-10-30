@@ -13,6 +13,7 @@
                     <td scope="col">NISN</td>
                     <td scope="col">Nama Lengkap</td>
                     <td scope="col">Asal Sekolah</td>
+                    <td scope="col">Asal Provinsi</td>
                     <td scope="col">E-mail</td>
                     <td scope="col">Kartu Pelajar</td>
                     <td scope="col">Bukti Bayar</td>
@@ -27,6 +28,7 @@
                         <td>{{ $data->nisn }}</td>
                         <td>{{ $data->user->name }}</td>
                         <td>{{ $data->asal_sekolah }}</td>
+                        <td>{{ $data->user->province->name }}</td>
                         <td>{{ $data->user->email }}</td>
                         <td><x-admin.image-modal :imageUrl="$data->foto_kartu_pelajar" /></td>
                         <td><x-admin.image-modal :imageUrl="$data->foto_bukti_pembayaran" /></td>

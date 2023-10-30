@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
+        $this->call([
+            ProvinceSeeder::class, // Create provinces
+        ]);
 
         // Create participant users and their details
         $participantCount = 50; // Adjust the number of participants you want to create

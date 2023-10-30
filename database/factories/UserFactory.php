@@ -19,6 +19,7 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => bcrypt('password'), // Default password for testing
             'phone_number' => '0812312332',
+            'province_id' => $this->faker->numberBetween(1, 38),
             'remember_token' => Str::random(10),
         ];
     }

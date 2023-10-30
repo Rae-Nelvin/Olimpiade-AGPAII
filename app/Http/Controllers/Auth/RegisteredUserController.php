@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\ParticipantDetail;
+use App\Models\Province;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -22,7 +23,8 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        $provinces = Province::all();
+        return view('auth.register', compact('provinces'));
     }
 
     /**
@@ -41,6 +43,7 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'string', 'min:8', Rules\Password::defaults()],
             'nisn' => ['required', 'string', 'unique:participant_details,nisn', 'regex:/^[0-9]{10}$/'],
             'asal_sekolah' => ['required', 'string'],
+            'province_id' => ['required', 'exists:provinces,id'],
             'foto_kartu_pelajar' => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
             'foto_bukti_pembayaran' => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
             'phone_number' => ['required', 'string', 'regex:/^08\d{9,12}$/'],
@@ -50,6 +53,7 @@ class RegisteredUserController extends Controller
             'phone_number.required' => 'Nomor Handphone is required',
             'foto_kartu_pelajar.required' => 'Kartu Pelajar must be an image file (jpeg/png)',
             'foto_bukti_pembayaran.required' => 'Bukti Pembayaran must be an image file (jpeg/png)',
+            'province_id.required' => 'Provinsi field is required',
         ]);
 
         $data = $request->all();
@@ -59,6 +63,7 @@ class RegisteredUserController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'phone_number' => $data['phone_number'],
+            'province_id' => $data['province_id'],
         ]);
 
         $randomDirectoryName = Str::random(20);
