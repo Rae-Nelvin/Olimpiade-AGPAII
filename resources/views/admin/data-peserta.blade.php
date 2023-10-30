@@ -28,7 +28,7 @@
                         <td>{{ $data->nisn }}</td>
                         <td>{{ $data->user->name }}</td>
                         <td>{{ $data->asal_sekolah }}</td>
-                        <td>{{ $data->user->province->name }}</td>
+                        <td>{{ $data->user->province->name ?? '-' }}</td>
                         <td>{{ $data->user->email }}</td>
                         <td><x-admin.image-modal :imageUrl="$data->foto_kartu_pelajar" /></td>
                         <td><x-admin.image-modal :imageUrl="$data->foto_bukti_pembayaran" /></td>
