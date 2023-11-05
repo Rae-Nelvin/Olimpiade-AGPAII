@@ -24,6 +24,7 @@ module.exports = {
         "text-custom-red",
         "ring-custom-orange",
         "border-custom-grey",
+        'border-custom-orange',
     ],
 
     theme: {

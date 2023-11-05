@@ -876,6 +876,9 @@ video {
   grid-column: span 5 / span 5;
 }.col-span-6 {
   grid-column: span 6 / span 6;
+}.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }.mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -912,8 +915,12 @@ video {
   margin-bottom: 1.25rem;
 }.mb-7 {
   margin-bottom: 1.75rem;
+}.ml-10 {
+  margin-left: 2.5rem;
 }.ml-auto {
   margin-left: auto;
+}.mr-10 {
+  margin-right: 2.5rem;
 }.mr-2 {
   margin-right: 0.5rem;
 }.mt-0 {
@@ -1038,9 +1045,6 @@ video {
 }.w-max {
   width: -moz-max-content;
   width: max-content;
-}.w-min {
-  width: -moz-min-content;
-  width: min-content;
 }.max-w-5xl {
   max-width: 64rem;
 }.flex-1 {
@@ -1212,6 +1216,8 @@ video {
   border-width: 0px;
 }.border-\[1px\] {
   border-width: 1px;
+}.border-2 {
+  border-width: 2px;
 }.border-blue-600 {
   --tw-border-opacity: 1;
   border-color: rgb(28 100 242 / var(--tw-border-opacity));
@@ -1238,6 +1244,12 @@ video {
 }.border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}.border-custom-light-orange {
+  --tw-border-opacity: 1;
+  border-color: rgb(254 241 237 / var(--tw-border-opacity));
+}.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(240 82 82 / var(--tw-border-opacity));
 }.bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -1850,6 +1862,8 @@ video {
   }.lg\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
+  }.lg\:w-full {
+    width: 100%;
   }.lg\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }.lg\:grid-cols-6 {
@@ -1900,12 +1914,18 @@ video {
   }.lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }.lg\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }.lg\:px-28 {
     padding-left: 7rem;
     padding-right: 7rem;
   }.lg\:px-60 {
     padding-left: 15rem;
     padding-right: 15rem;
+  }.lg\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }.lg\:py-11 {
     padding-top: 2.75rem;
     padding-bottom: 2.75rem;

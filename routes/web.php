@@ -26,6 +26,8 @@ Route::middleware(['auth', 'isParticipant'])->group(function () {
     Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
 
     Route::get('/data-diri', [UserController::class, 'dataDiriIndex'])->name('data-diri');
+    Route::get('/perbaharui-data-diri/{id}', [UserController::class, 'edit'])->name('perbaharui-data-diri');
+    Route::put('/update-data-diri', [UserController::class, 'update'])->name('update-data-diri');
 });
 
 
