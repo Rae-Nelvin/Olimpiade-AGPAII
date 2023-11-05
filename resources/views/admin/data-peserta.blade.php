@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-admin.header title="Data Peserta" />
-    <div class="mt-6">
-        <x-landing.button>Unduh CSV</x-landing.button>
+    <div class="mt-6 w-max">
+        <x-landing.button route="{{ route('download-data-peserta') }}">Unduh CSV</x-landing.button>
     </div>
     {{-- <x-landing.button href="{{ route('admin.data-peserta.export') }}">Unduh CSV</x-landing.button> --}}
     <div class="relative overflow-x-auto z-20">

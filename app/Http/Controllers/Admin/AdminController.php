@@ -20,7 +20,8 @@ class AdminController extends Controller
     public function index()
     {
         $totalPendaftar = ParticipantDetail::whereHas('user', function ($query) {
-            $query->whereNull('deleted_at');})->count();
+            $query->whereNull('deleted_at');
+        })->count();
 
         return view('admin.dashboard', compact('totalPendaftar'));
     }
@@ -28,53 +29,59 @@ class AdminController extends Controller
     public function dataPesertaIndex()
     {
         $results = ParticipantDetail::whereHas('user', function ($query) {
-            $query->whereNull('deleted_at');})->paginate(10);
+            $query->whereNull('deleted_at');
+        })->paginate(10);
 
         return view('admin.data-peserta', compact('results'));
     }
 
-    // public function export()
-    // {
-    //     $filename = 'exported-data-peserta.csv';
+    public function export()
+    {
+        $filename = 'exported-data-peserta.csv';
 
-    //     $headers = array(
-    //         "Content-type" => "text/csv",
-    //         "Content-Disposition" => "attachment; filename=$filename",
-    //         "Pragma" => "no-cache",
-    //         "Cache-Control" => "must-revalidate, post-check=0, pre-check=0",
-    //         "Expires" => "0",
-    //     );
+        // Query your database to fetch the data
+        $data = DB::table('participant_details')
+            ->join('users', 'participant_details.user_id', '=', 'users.id')
+            ->join('provinces', 'users.province_id', '=', 'provinces.id')
+            ->select('participant_details.*', 'users.*', 'provinces.name as province_name')
+            ->get();
 
-    //     $handle = fopen('php://output', 'w');
+        $headers = [
+            "Content-type" => "text/csv",
+            "Content-Disposition" => "attachment; filename=exported-data-peserta.csv",
+        ];
 
-    //     // Write the header row
-    //     fputcsv($handle, ['No', 'Tanggal', 'NISN', 'Nama Lengkap', 'Asal Sekolah', 'E-mail', 'Kartu Pelajar', 'Bukti Bayar']); // Replace with your table's column names
+        $counter = 1;
 
-    //     // Query your database to fetch the data
-    //     $data = DB::table('detail_participants')
-    //         ->join('users', 'detail_participants.user_id', '=', 'users.id')
-    //         ->select('detail_participants.nisn', 'detail_participants.asal_sekolah', 'detail_participants.')
-    //         ->get();
+        return response()->stream(
+            function () use ($data, $counter) {
+                $handle = fopen('php://output', 'w');
 
-    //     // Loop through the data and write each row to the CSV file
-    //     foreach ($data as $row) {
-    //         fputcsv($handle, [
-    //             $row->column1,
-    //             $row->column2,
-    //             $row->column3,
-    //         ]); // Replace with your table's column names
-    //     }
+                // Create a new CSV file
+                fputcsv($handle, ['No', 'Tanggal', 'NISN', 'Nama Lengkap', 'Asal Sekolah', 'Asal Provinsi', 'E-mail', 'Kartu Pelajar', 'Bukti Bayar']);
 
-    //     fclose($handle);
+                // Loop through the data and write each row to the CSV file
+                foreach ($data as $row) {
+                    fputcsv($handle, [
+                        $counter,
+                        $row->created_at,
+                        $row->nisn,
+                        $row->name,
+                        $row->asal_sekolah,
+                        $row->province_name,
+                        $row->email,
+                        $row->foto_kartu_pelajar,
+                        $row->foto_bukti_pembayaran,
+                    ]);
+                    $counter++;
+                }
 
-    //     return Response::stream(
-    //         function () use ($handle) {
-    //             fclose($handle);
-    //         },
-    //         200,
-    //         $headers
-    //     );
-    // }
+                fclose($handle);
+            },
+            200,
+            $headers
+        );
+    }
 
     /**
      * Store a newly created resource in storage.
