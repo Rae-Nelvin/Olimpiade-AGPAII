@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="mt-10 w-2/3">
-        @if (!$participant->province_id)
+        @if (!$participant->user->province_id)
             <x-admin.box header="Pengingat">
                 <div class="flex flex-col space-y-7">
                     <p class="font-normal text-3xl">Tolong segera perbaharui data diri anda</p>

@@ -67,7 +67,7 @@ class UserController extends Controller
             'nisn.regex' => 'NISN field is required and must be 10 digits',
             'asal_sekolah.required' => 'Asal Sekolah field is required',
             'phone_number.required' => 'Nomor Handphone is required',
-            'province_id.required' => 'Provinsi field is required',
+            'province_id.required' => 'Asal provinsi harus diisi',
         ]);
 
         $participant = ParticipantDetail::findOrFail($request->participant_id);
