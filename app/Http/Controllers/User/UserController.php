@@ -21,7 +21,9 @@ class UserController extends Controller
     {
         $today = Carbon::today();
         $targetDate = Carbon::parse('2023-11-12');
-        return view('dashboard', compact('today', 'targetDate'));
+        $participant = ParticipantDetail::where('user_id', Auth::user()->id)->first();
+
+        return view('dashboard', compact('today', 'targetDate', 'participant'));
     }
 
     public function dataDiriIndex()

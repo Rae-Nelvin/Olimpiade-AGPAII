@@ -37,6 +37,19 @@
             </x-admin.box>
         </div>
     </div>
+    <div class="mt-10 w-2/3">
+        @if (!$participant->province_id)
+            <x-admin.box header="Pengingat">
+                <div class="flex flex-col space-y-7">
+                    <p class="font-normal text-3xl">Tolong segera perbaharui data diri anda</p>
+                    <div class="w-fit">
+                        <x-landing.button route="{{ route('perbaharui-data-diri', $participant->id) }}">Perbaharui Data
+                            Diri</x-landing.button>
+                    </div>
+                </div>
+            </x-admin.box>
+        @endif
+    </div>
 </x-app-layout>
 
 <script>
