@@ -137,7 +137,7 @@ class AdminController extends Controller
     public function destroy($id)
     {
         $user = User::findOrFail($id);
-        $user->delete();
+        $user->forceDelete();
         return redirect()->back();
     }
 }

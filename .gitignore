@@ -17,3 +17,4 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 passwords-hostinger.txt
+backups/
