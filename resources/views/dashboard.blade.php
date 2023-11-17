@@ -3,7 +3,7 @@
     <div class="flex flex-row space-x-7 mt-4">
         <div class="w-2/5">
             <x-admin.box header="Token Ujian">
-                @if ($today->isSameDay($targetDate))
+                @if ($participant->token_ujian)
                     <div class="flex flex-row justify-between">
                         <h2 id="copyValue" class="font-normal text-3xl">X42305239</h2>
                         <button id="copyButton"
@@ -19,7 +19,7 @@
                     </div>
                 @else
                     <h1 class="font-normal text-3xl text-black">Harap menunggu tanggal pelaksanaan ujian pada
-                        <span class="font-bold">18 November 2023</span>
+                        <span class="font-bold">20 November 2023</span>
                     </h1>
                 @endif
             </x-admin.box>
