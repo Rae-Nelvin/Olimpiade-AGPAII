@@ -145,14 +145,14 @@
                 <div class="lg:col-span-2"></div>
                 <div class="flex flex-col mt-20 lg:col-span-3 space-y-8">
                     <h1 class="font-normal text-2xl">Timeline OLPAIN 2023</h1>
-                    <x-landing.timelineTile number=1 date="1 Oktober - 15 November 2023" event="Pendaftaran Peserta"
+                    <x-landing.timelineTile number=1 date="1 Oktober - 20 November 2023" event="Pendaftaran Peserta"
                         :isActive='true' />
-                    <x-landing.timelineTile number=2 date="18 November 2023"
-                        event="Technical Meeting & <br /> Rilis Password E-Ujian" />
-                    <x-landing.timelineTile number=3 date="20 November 2023" event="Penyisihan Provinsi" />
-                    <x-landing.timelineTile number=4 date="24 November 2023" event="Pengumuman Provinsi" />
-                    <x-landing.timelineTile number=5 date="26 November 2023" event="Technical Meeting Final" />
-                    <x-landing.timelineTile number=6 date="16 Desember 2023" event="Final (Kota Malang)" />
+                    <x-landing.timelineTile number=2 date="22 - 23 November 2023"
+                        event="Technical Meeting (Online Zoom) <br /> &  Rilis Password E-Ujian" />
+                    <x-landing.timelineTile number=3 date="24 November 2023" event="Penyisihan Provinsi (Online)" />
+                    <x-landing.timelineTile number=4 date="29 November 2023" event="Pengumuman Provinsi" />
+                    <x-landing.timelineTile number=5 date="TBA" event="Technical Meeting Final" />
+                    <x-landing.timelineTile number=6 date="16 - 17 Desember 2023" event="Final (Kota Malang)" />
                     <x-landing.timelineTile number=7 date="17 Desember 2023" event="Awarding & Closing Ceremony" />
                 </div>
             </div>
