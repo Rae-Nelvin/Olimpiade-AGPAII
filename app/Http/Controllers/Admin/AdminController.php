@@ -41,8 +41,8 @@ class AdminController extends Controller
 
         // Query your database to fetch the data
         $data = DB::table('participant_details')
-            ->join('users', 'participant_details.user_id', '=', 'users.id')
-            ->join('provinces', 'users.province_id', '=', 'provinces.id')
+            ->leftJoin('users', 'participant_details.user_id', '=', 'users.id')
+            ->leftJoin('provinces', 'users.province_id', '=', 'provinces.id')
             ->select('participant_details.*', 'users.*', 'provinces.name as province_name')
             ->get();
 
@@ -58,7 +58,7 @@ class AdminController extends Controller
                 $handle = fopen('php://output', 'w');
 
                 // Create a new CSV file
-                fputcsv($handle, ['No', 'Tanggal', 'NISN', 'Nama Lengkap', 'Asal Sekolah', 'Asal Provinsi', 'E-mail', 'Kartu Pelajar', 'Bukti Bayar']);
+                fputcsv($handle, ['No', 'Tanggal', 'NISN', 'Nama Lengkap', 'Asal Sekolah', 'Asal Provinsi', 'E-mail', 'Kartu Pelajar', 'Bukti Bayar', 'Username Ujian', 'Password Ujian']);
 
                 // Loop through the data and write each row to the CSV file
                 foreach ($data as $row) {
@@ -68,10 +68,12 @@ class AdminController extends Controller
                         $row->nisn,
                         $row->name,
                         $row->asal_sekolah,
-                        $row->province_name,
+                        $row->province_name ?? '-',
                         $row->email,
                         $row->foto_kartu_pelajar,
                         $row->foto_bukti_pembayaran,
+                        $row->username_ujian ?? '-',
+                        $row->password_ujian ?? '-',
                     ]);
                     $counter++;
                 }
