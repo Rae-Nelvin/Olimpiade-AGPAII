@@ -18,7 +18,8 @@ class ParticipantDetail extends Model
         'asal_sekolah',
         'foto_kartu_pelajar',
         'foto_bukti_pembayaran',
-        'token_ujian',
+        'username_ujian',
+        'password_ujian',
     ];
 
     public function user()
