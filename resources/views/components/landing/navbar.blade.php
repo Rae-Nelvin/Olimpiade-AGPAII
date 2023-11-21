@@ -24,13 +24,13 @@
                 <li>
                     <x-landing.nav-link name="Cara Pendaftaran" route="#cara-pendaftaran" :active="request()->routeIs('cara-pendaftaran')" />
                 </li>
-                <li>
+                {{-- <li>
                     <x-landing.textButton route="register">
                         <div class="block py-3">
                             Daftar Sekarang
                         </div>
                     </x-landing.textButton>
-                </li>
+                </li> --}}
                 <li>
                     <x-landing.button background="bg-custom-orange" border='border-transparent' textColor='text-white' hover='hover:bg-custom-orange/80' route="login">
                         <h2 class="font-bold">Masuk Dashboard</h2>

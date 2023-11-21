@@ -21,10 +21,10 @@
                             </svg>
                             <h3 class="text-base">Informasi Olimpiade</h3>
                         </x-landing.textButton>
-                        <x-landing.button background="bg-custom-orange" border='border-transparent'
+                        {{-- <x-landing.button background="bg-custom-orange" border='border-transparent'
                             textColor='text-white' hover='hover:bg-custom-orange/80' route="register">
                             <h2 class="font-bold">Daftar Sekarang -></h2>
-                        </x-landing.button>
+                        </x-landing.button> --}}
                     </div>
                 </div>
                 <div class="flex flex-row justify-center mt-40">
@@ -252,7 +252,7 @@
         </div>
     </div>
     {{-- Section 5 --}}
-    <div
+    {{-- <div
         class="bg-gradient-to-r from-custom-orange to-custom-light-orange-2 py-14 px-9 flex flex-col space-y-8 lg:space-y-0 lg:py-20 lg:px-60 lg:flex-row lg:justify-between text-white items-center">
         <div class="flex flex-col space-y-5 lg:w-1/2">
             <h1 class="text-2xl lg:text-4xl">Daftarkan dirimu sekarang juga!</h1>
@@ -265,5 +265,5 @@
                 Daftar Sekarang ->
             </x-landing.button>
         </div>
-    </div>
+    </div> --}}
 </x-guest-layout>
