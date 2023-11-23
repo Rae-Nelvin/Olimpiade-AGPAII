@@ -25,7 +25,8 @@ class AdminController extends Controller
 
         $participants = ParticipantDetail::all();
         foreach ($participants as $participant) {
-            $participant->username_ujian = $participant->nisn . '.' . '13262';
+            $nisnWithoutZeros = ltrim($participant->nisn, '0');
+            $participant->username_ujian = $nisnWithoutZeros . '.' . '13262';
             $participant->password_ujian = '123';
             $participant->save();
         }
