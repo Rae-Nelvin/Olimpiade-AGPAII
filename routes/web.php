@@ -37,9 +37,9 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/data-peserta', [AdminController::class, 'dataPesertaIndex'])->name('data-peserta');
     Route::delete('/data-peserta/{id}', [AdminController::class, 'destroy'])->name('delete-participant');
     Route::get('/download-data-peserta', [AdminController::class, 'export'])->name('download-data-peserta');
-    Route::post('/search-participant', [AdminController::class, 'search'])->name('search-participant');
-    Route::get('/hasil-search', [AdminController::class, 'hasilSearch'])->name('hasil-search');
-    Route::get('/data-peserta/{id}', [AdminController::class, 'show'])->name('show-participant');
+    Route::post('/search-participant', [AdminController::class, 'show'])->name('search-participant');
+    Route::get('/data-peserta/{id}', [AdminController::class, 'edit'])->name('show-participant');
+    Route::post('/data-peserta', [AdminController::class, 'update'])->name('update-participant');
 });
 
 

@@ -96,7 +96,13 @@ class AdminController extends Controller
         //
     }
 
-    public function search(Request $request)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Request $request)
     {
         $search = $request->search;
 
@@ -108,17 +114,6 @@ class AdminController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -126,7 +121,9 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $participantDetail = ParticipantDetail::findOrFail($id);
+
+        return view('admin.edit-participant', compact('participantDetail'));
     }
 
     /**
@@ -136,9 +133,25 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+
+        $request->validate([
+            'name' => ['required', 'exists:users,name'],
+            'email' => ['required', 'exists:users,email'],
+            'nisn' => ['required', 'exists:participant_details,nisn'],
+            'password' => ['required', 'min:8'],
+        ]);
+
+        $data = $request->all();
+
+        $participantDetail = ParticipantDetail::findOrFail($data['participant_detail_id']);
+        $participantDetail->user->update([
+            'password' => bcrypt($data['password']),
+        ]);
+        $participantDetail->save();
+
+        return redirect()->route('data-peserta');
     }
 
     /**

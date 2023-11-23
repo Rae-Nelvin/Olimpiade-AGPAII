@@ -2,7 +2,8 @@
     <x-admin.header title="Data Peserta" />
     <div class="mt-6 w-full flex flex-row items-center">
         <x-landing.button route="{{ route('download-data-peserta') }}">Unduh CSV</x-landing.button>
-        <form action="{{ route('search-participant') }}" method="POST" class="w-4/5 ml-10 flex flex-row items-center space-x-5">
+        <form action="{{ route('search-participant') }}" method="POST"
+            class="w-4/5 ml-10 flex flex-row items-center space-x-5">
             @csrf
             <input type="text" name="search" placeholder="Masukkan NISN" class="w-full rounded-lg py-3 px-7" />
             <x-landing.button>Cari</x-landing.button>
@@ -38,6 +39,8 @@
                         <td><x-admin.image-modal :imageUrl="$data->foto_kartu_pelajar" /></td>
                         <td><x-admin.image-modal :imageUrl="$data->foto_bukti_pembayaran" /></td>
                         <td class="flex flex-row space-x-2 w-fit py-6">
+                            <a href="{{ route('show-participant', $data->user->id) }}"
+                                class="bg-[#0077b6] text-white py-1 px-2 font-normal text-xs rounded-md">Edit</a>
                             <x-admin.delete-modal :id="$data->user->id" />
                         </td>
                     </tr>
