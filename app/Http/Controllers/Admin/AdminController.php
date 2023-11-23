@@ -23,13 +23,13 @@ class AdminController extends Controller
             $query->whereNull('deleted_at');
         })->count();
 
-        $participants = ParticipantDetail::all();
-        foreach ($participants as $participant) {
-            $nisnWithoutZeros = ltrim($participant->nisn, '0');
-            $participant->username_ujian = $nisnWithoutZeros . '.' . '13262';
-            $participant->password_ujian = '123';
-            $participant->save();
-        }
+        // $participants = ParticipantDetail::all();
+        // foreach ($participants as $participant) {
+        //     $nisnWithoutZeros = ltrim($participant->nisn, '0');
+        //     $participant->username_ujian = $nisnWithoutZeros . '.' . '13262';
+        //     $participant->password_ujian = '123';
+        //     $participant->save();
+        // }
 
         return view('admin.dashboard', compact('totalPendaftar'));
     }
