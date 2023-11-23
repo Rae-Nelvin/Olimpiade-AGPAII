@@ -41,6 +41,11 @@
                         <td class="flex flex-row space-x-2 w-fit py-6">
                             <a href="{{ route('show-participant', $data->user->id) }}"
                                 class="bg-[#0077b6] text-white py-1 px-2 font-normal text-xs rounded-md">Edit</a>
+                            @if ($data->username_ujian === null)
+                                <a href="{{ route('isi-data-ujian', $data->user->id) }}"
+                                    class="bg-green-600 text-white py-1 px-2 font-normal text-xs rounded-md">Isi Data
+                                    Ujian</a>
+                            @endif
                             <x-admin.delete-modal :id="$data->user->id" />
                         </td>
                     </tr>

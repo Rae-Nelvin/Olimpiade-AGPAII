@@ -40,6 +40,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('/search-participant', [AdminController::class, 'show'])->name('search-participant');
     Route::get('/data-peserta/{id}', [AdminController::class, 'edit'])->name('show-participant');
     Route::post('/data-peserta', [AdminController::class, 'update'])->name('update-participant');
+    Route::get('/isi-data-ujian/{id}', [AdminController::class, 'isiDataUjian'])->name('isi-data-ujian');
+    Route::post('/isi-data-ujian', [AdminController::class, 'storeDataUjian'])->name('store-data-ujian');
 });
 
 

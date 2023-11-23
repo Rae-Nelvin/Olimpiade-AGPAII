@@ -154,6 +154,31 @@ class AdminController extends Controller
         return redirect()->route('data-peserta');
     }
 
+    public function isiDataUjian($id)
+    {
+        $participantDetail = ParticipantDetail::findOrFail($id);
+
+        return view('admin.isi-data-ujian', compact('participantDetail'));
+    }
+
+    public function storeDataUjian(Request $request)
+    {
+        $request->validate([
+            'username_ujian' => ['required'],
+        ]);
+
+        $data = $request->all();
+
+        $participantDetail = ParticipantDetail::findOrFail($data['participant_detail_id']);
+        $participantDetail->update([
+            'username_ujian' => $data['username_ujian'],
+            'password_ujian' => '123',
+        ]);
+        $participantDetail->save();
+
+        return redirect()->route('data-peserta');
+    }
+
     /**
      * Remove the specified resource from storage.
      *
