@@ -1,7 +1,12 @@
 <x-app-layout>
     <x-admin.header title="Data Peserta" />
-    <div class="mt-6 w-max">
+    <div class="mt-6 w-full flex flex-row items-center">
         <x-landing.button route="{{ route('download-data-peserta') }}">Unduh CSV</x-landing.button>
+        <form action="{{ route('search-participant') }}" method="POST" class="w-4/5 ml-10 flex flex-row items-center space-x-5">
+            @csrf
+            <input type="text" name="search" placeholder="Masukkan NISN" class="w-full rounded-lg py-3 px-7" />
+            <x-landing.button>Cari</x-landing.button>
+        </form>
     </div>
     {{-- <x-landing.button href="{{ route('admin.data-peserta.export') }}">Unduh CSV</x-landing.button> --}}
     <div class="relative overflow-x-auto z-20">

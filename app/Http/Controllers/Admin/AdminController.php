@@ -96,6 +96,17 @@ class AdminController extends Controller
         //
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->search;
+
+        $results = ParticipantDetail::whereHas('user', function ($query) use ($search) {
+            $query->where('nisn', 'like', '%' . $search . '%');
+        })->paginate(10);
+
+        return view('admin.data-peserta', compact('results'));
+    }
+
     /**
      * Display the specified resource.
      *
