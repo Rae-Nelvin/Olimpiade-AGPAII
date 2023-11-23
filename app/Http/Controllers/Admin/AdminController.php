@@ -23,6 +23,13 @@ class AdminController extends Controller
             $query->whereNull('deleted_at');
         })->count();
 
+        $participants = ParticipantDetail::all();
+        foreach ($participants as $participant) {
+            $participant->username_ujian = $participant->nisn . '.' . '13262';
+            $participant->password_ujian = '123';
+            $participant->save();
+        }
+
         return view('admin.dashboard', compact('totalPendaftar'));
     }
 
