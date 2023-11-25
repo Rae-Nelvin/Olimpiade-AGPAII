@@ -149,7 +149,7 @@
                         :isActive='true' />
                     <x-landing.timelineTile number=2 date="22 - 23 November 2023"
                         event="Technical Meeting (Online Zoom) <br /> &  Rilis Password E-Ujian" :isActive='true' />
-                    <x-landing.timelineTile number=3 date="24 November 2023" event="Penyisihan Provinsi (Online)" />
+                    <x-landing.timelineTile number=3 date="24 November 2023" event="Penyisihan Provinsi (Online)" :isActive='true' />
                     <x-landing.timelineTile number=4 date="29 November 2023" event="Pengumuman Provinsi" />
                     <x-landing.timelineTile number=5 date="TBA" event="Technical Meeting Final" />
                     <x-landing.timelineTile number=6 date="16 - 17 Desember 2023" event="Final (Kota Malang)" />
